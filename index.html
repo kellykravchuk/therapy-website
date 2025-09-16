@@ -24,10 +24,32 @@
     .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow)}
 
     /* Full-screen hero with video */
-    .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
-    .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:brightness(.88) saturate(1.05)}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.86) 0%, rgba(255,255,255,.60) 45%, rgba(255,255,255,.42) 100%);z-index:-1}
-    .hero .inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:60px 0}
+/* Full-screen hero with static image */
+.hero{
+  position:relative;
+  min-height:92vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:url('assets/ocean-hero.jpg') center/cover no-repeat;
+}
+/* soft overlay so text stays readable */
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,
+    rgba(255,255,255,.86) 0%,
+    rgba(255,255,255,.60) 45%,
+    rgba(255,255,255,.42) 100%);
+  z-index:-1;
+}
+/* keep layout the same */
+.hero .inner{
+  position:relative; z-index:1;
+  display:grid; grid-template-columns:1.1fr .9fr;
+  gap:2rem; align-items:center; padding:60px 0;
+}
+
 
     .kicker{color:#3a6cb6;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
     .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1rem}
@@ -94,11 +116,33 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="herotitle">
-      <video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/ocean-hero.jpg">
-        <source src="assets/breathing.mp4" type="video/mp4" />
-        <source src="assets/breathing.webm" type="video/webm" />
-      </video>
+<section class="hero" aria-labelledby="herotitle">
+  <div class="container inner">
+    <div>
+      <p class="kicker">Therapy in the South Bay & Online</p>
+      <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
+      <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
+      <div class="badges" aria-label="Focus areas">
+        <span class="badge">Children & Teens</span>
+        <span class="badge">Adults & Couples</span>
+        <span class="badge">Parent Coaching</span>
+        <span class="badge">Anxiety • Perfectionism</span>
+        <span class="badge">Relationships • Life Transitions</span>
+      </div>
+      <p><a class="cta" href="#contact">Request a free 15-minute consult</a></p>
+      <div class="hero-card" role="note">
+        <strong>Note:</strong> I offer telehealth across California and in-person sessions in Hermosa Beach.
+      </div>
+    </div>
+    <div>
+      
+      <div class="hero-card" style="background:rgba(255,255,255,.75);backdrop-filter:blur(6px)">
+        <strong>Welcome.</strong> Take your time — this is a calm space.
+      </div>
+    </div>
+  </div>
+</section>
+
       <div class="container inner">
         <div>
           <p class="kicker">Therapy in the South Bay & Online</p>
