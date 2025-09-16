@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kelly Kravchuk, MSW, ACSW – Therapy in the South Bay & Online</title>
+  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, teens, adults, and couples in the South Bay (Hermosa/Manhattan/Redondo) and online across California." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;--ink:#1a1a1a;--muted:#5f6b7a;--brand:#3b82f6;--accent:#9ec9ff;--soft:#f7fbff;--card:#ffffff;
+      --radius:20px;--shadow:0 10px 30px rgba(2,28,71,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px,92%);margin:0 auto}
+    header{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e9eef5;z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#dfeeff);box-shadow:inset 0 0 0 1px #c6dbff}
+    .brand h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:.2px}
+    .navlinks a{margin-left:1rem;font-weight:600;color:#2a3545}
+    .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow)}
+
+    .hero{isolation:isolate;position:relative;background:linear-gradient(180deg,#f6fbff 0%, #ffffff 60%)}
+    .hero .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:60px 0}
+    .kicker{color:#3a6cb6;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+    .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3rem);margin:.4rem 0 1rem}
+    .subtitle{color:var(--muted);font-size:1.05rem}
+    .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
+    .badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+    .badge{padding:.35rem .6rem;border-radius:999px;border:1px solid #dfe6f2;background:#f6f9ff;color:#2b3a55;font-size:.8rem;font-weight:600}
+    .hero-figure{position:relative;border-radius:24px;overflow:hidden;min-height:300px;background:linear-gradient(135deg,#dbeafe,#f5faff)}
+    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block}
+
+    section{padding:64px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .card{background:var(--card);border:1px solid #e9eef5;border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)}
+    .card h3{margin-top:0}
+    .pill{display:inline-block;padding:.25rem .6rem;border:1px solid #e1e8f5;border-radius:999px;background:#f8fbff;font-size:.75rem;color:#42526e;margin-right:.35rem;margin-bottom:.35rem}
+
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+
+    footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
+    footer a{color:#bfdbfe}
+
+    @media (max-width:900px){
+      .hero .inner{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:static;width:auto;height:auto;padding:.5rem;background:#fffae5;border:1px solid #f1d48f}
+    form input, form textarea, form select{width:100%;padding:.8rem;border:1px solid #d8e1ef;border-radius:12px;margin:.5rem 0;background:#fff}
+    form button{all:unset;background:var(--brand);color:#fff;padding:.8rem 1rem;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:var(--shadow)}
+  </style>
+  
+  <!-- Basic JSON-LD for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Kelly Kravchuk, MSW, ACSW",
+    "description": "Psychodynamically informed therapy for children, teens, adults, and couples in the South Bay and online across California.",
+    "areaServed": "California",
+    "url": "https://kellykravchuk.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hermosa Beach",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-XXX-XXX-XXXX"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <h1>Kelly Kravchuk, MSW, ACSW</h1>
+        </div>
+        <div class="navlinks">
+          <a href="#approach">Approach</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="cta">Book a consult</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="herotitle">
+      <div class="container inner">
+        <div>
+          <p class="kicker">Therapy in the South Bay & Online</p>
+          <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
+          <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
+          <div class="badges" aria-label="Focus areas">
+            <span class="badge">Children & Teens</span>
+            <span class="badge">Adults & Couples</span>
+            <span class="badge">Parent Coaching</span>
+            <span class="badge">Anxiety • Perfectionism</span>
+            <span class="badge">Relationships • Life Transitions</span>
+          </div>
+          <p>
+            <a class="cta" href="#contact">Request a free 15‑minute consult</a>
+          </p>
+          <div class="hero-card" role="note">
+            <strong>Note:</strong> I offer telehealth across California and in‑person sessions in Hermosa Beach.
+          </div>
+        </div>
+        <div>
+          <figure class="hero-figure" aria-label="Ocean view calming image">
+            <!-- Replace with your headshot or a serene ocean image you own rights to -->
+            <img alt="Soft ocean horizon at sunrise" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="container two-col">
+        <div>
+          <h2 id="approach-title">My Approach</h2>
+          <p>I work integratively, with a core in <strong>psychodynamic</strong> and <strong>relational</strong> therapy, informed by <strong>attachment science</strong>, <strong>trauma‑informed care</strong>, and <strong>developmental frameworks</strong> (e.g., DIR/Floortime for children and families). We’ll explore how past relationships live in the present, including how an <em>inner critic</em> or <em>old alarm system</em> shows up today — then pair insight with skills for regulation, boundaries, and connection.</p>
+          <ul>
+            <li>Warm, collaborative pace — safety before depth.</li>
+            <li>Active use of the here‑and‑now relationship (transference/countertransference) for growth.</li>
+            <li>Strengths‑forward: updating protective strategies that no longer fit.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Specialties</h3>
+          <div>
+            <span class="pill">Anxiety & Panic</span>
+            <span class="pill">Perfectionism & Self‑Criticism</span>
+            <span class="pill">Life Transitions</span>
+            <span class="pill">Relationship Concerns</span>
+            <span class="pill">Parent Coaching</span>
+            <span class="pill">College/Young Adult</span>
+            <span class="pill">Neurodiversity‑affirming</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Services</h2>
+        <div class="grid-3">
+          <article class="card" aria-labelledby="svc1"><h3 id="svc1">Individual Therapy</h3>
+            <p>Support for children, teens, and adults. Telehealth statewide and in‑person in Hermosa Beach. 50‑minute sessions.</p>
+          </article>
+          <article class="card" aria-labelledby="svc2"><h3 id="svc2">Couples Therapy</h3>
+            <p>Attachment‑oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
+          </article>
+          <article class="card" aria-labelledby="svc3"><h3 id="svc3">Parent Coaching & Family</h3>
+            <p>Practical, relationship‑centered strategies for co‑regulation, boundaries, and attuned communication.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <div class="container two-col">
+        <div>
+          <h2 id="about-title">About Kelly</h2>
+          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW</strong> (she/her), a therapist serving the South Bay and clients across California. I integrate psychodynamic and relational therapy with attachment and trauma‑informed care. My background includes work with neurodivergent youth and families (parent coaching and developmental support) and short‑term counseling with adults in a college setting.</p>
+          <p>I believe therapy should feel safe, collaborative, and genuinely helpful. Together we’ll slow down, name what’s happening, and build more choice in how you relate to yourself and others.</p>
+          <p class="muted"><em>Supervision:</em> Registered Associate Clinical Social Worker in California. Receiving clinical supervision toward licensure.</p>
+        </div>
+        <aside class="card" aria-label="Credentials and training">
+          <h3>Training & Orientation</h3>
+          <ul>
+            <li>MSW, University of Southern California (USC)</li>
+            <li>Psychodynamic & relational therapy</li>
+            <li>Attachment & trauma‑informed care</li>
+            <li>Developmental/DIR‑Floortime‑informed with children & families</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container two-col">
+        <div>
+          <h2 id="contact-title">Book a Free 15‑Minute Consult</h2>
+          <p>Email or call, or send a quick note below. I’ll get back to you within 1–2 business days.</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a><br>
+             <strong>Phone:</strong> <a href="tel:+1XXXXXXXXXX">(XXX) XXX‑XXXX</a></p>
+          <form action="mailto:hello@kellykravchuk.com" method="post" enctype="text/plain">
+            <label for="name">Your name</label>
+            <input id="name" name="name" required placeholder="Your full name" />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            <label for="message">Brief message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
+            <button type="submit">Send</button>
+            <p class="muted" style="font-size:.85rem;color:var(--muted)">Submitting will open your email client to send the message. Prefer direct email? Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.</p>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Location</h3>
+          <p>In‑person sessions available in Hermosa Beach (ocean‑view office). Exact address provided upon scheduling.</p>
+          <h3>Availability</h3>
+          <p>Weekdays and limited evenings. Telehealth across California.</p>
+          <h3>Fees</h3>
+          <p>Out‑of‑pocket; superbills available for out‑of‑network reimbursement. Sliding scale slots may be available.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW · South Bay & Telehealth (CA) · <a href="#contact">Contact</a></p>
+      <p style="opacity:.8;font-size:.9rem">This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
