@@ -25,7 +25,7 @@
 
     /* Full-screen hero with static image */
     .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:url('assets/ocean-hero.jpg') center/cover no-repeat}
-    .hero .inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:60px 0}
+   .hero .inner {position: relative;z-index: 1;display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem;align-items: flex-start; /* changed from center */padding: 80px 0 40px;    /* more space at the top, less at the bottom */}
 
     .kicker{color:#3a6cb6;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
     .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1rem}
