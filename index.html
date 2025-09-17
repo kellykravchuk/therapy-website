@@ -18,7 +18,7 @@
     header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e9eef5;z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
     .brand{display:flex;gap:.75rem;align-items:center}
-    .logo{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#dfeeff);box-shadow:inset 0 0 0 1px #c6dbff}
+.logo{width:40px; height:40px;border-radius:50%; object-fit:cover;box-shadow:0 0 0 1px #c6dbff;}
     .brand h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:.2px}
     .navlinks a{margin-left:1rem;font-weight:600;color:#2a3545}
     .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow)}
@@ -76,8 +76,8 @@
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <div class="logo" aria-hidden="true"></div>
-          <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
+          <img src="assets/headshot-circle.jpg" alt="Kelly Kravchuk" class="logo" />
+            <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
         </div>
         <div class="navlinks">
           <a href="#approach">Approach</a>
