@@ -9,31 +9,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#f6f9fc;--ink:#111827;--muted:#5f6b7a;--brand:#3b82f6;--accent:#9ec9ff;--tint:#edf7ff;--seafoam:#eaf6f3;--card:#ffffff;--radius:20px;--shadow:0 10px 30px rgba(2,28,71,.08)}
+    :root{
+      --bg:#f6f9fc; --ink:#111827; --muted:#5f6b7a; --brand:#3b82f6;
+      --tint:#edf7ff; --seafoam:#eaf6f3; --card:#ffffff;
+      --radius:20px; --shadow:0 10px 30px rgba(2,28,71,.08);
+    }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:linear-gradient(180deg,#f6f9fc,#fff 60%);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
     .container{width:min(1100px,92%);margin:0 auto}
+
+    /* Header */
     header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e9eef5;z-index:50}
     nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
     .brand{display:flex;gap:.75rem;align-items:center}
-.logo{width:40px; height:40px;border-radius:50%; object-fit:cover;box-shadow:0 0 0 1px #c6dbff;}
+    .logo{width:40px;height:40px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px #c6dbff}
     .brand h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:.2px}
     .navlinks a{margin-left:1rem;font-weight:600;color:#2a3545}
     .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow)}
 
-    /* Full-screen hero with static image */
-    .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:url('assets/ocean-hero.jpg') center/cover no-repeat}
-   .hero .inner {position: relative;z-index: 1;display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem;align-items: flex-start; /* changed from center */padding: 80px 0 40px;    /* more space at the top, less at the bottom */}
+    /* HERO — full-bleed image, NO overlay film, text lifted 1–2 lines */
+    .hero{
+      position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
+      background:url('assets/ocean-hero.jpg') center / cover no-repeat;
+      /* if you ever want a slight warm wash, add a ::before with very low opacity */
+    }
+    .hero .inner{
+      position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
+      align-items:flex-start;padding:24px 0 64px; /* ↑ pulls content higher */
+    }
+    .hero .inner > div:first-child{ margin-top:-12px; } /* subtle extra lift */
 
     .kicker{color:#3a6cb6;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
-    .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1rem}
-    .subtitle {color:#2f3a4a; font-size:1.05rem;text-shadow:1px 1px 4px rgba(0,0,0,.25);}
-    .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
+    .title{font-family:"Playfair Display",serif;line-height:1.12;font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1rem;color:#0f172a}
+    .subtitle{color:#2f3a4a;font-size:1.05rem}
     .badges{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
     .badge{padding:.35rem .6rem;border-radius:999px;border:1px solid #dfe6f2;background:#f6f9ff;color:#2b3a55;font-size:.8rem;font-weight:600}
+    .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
 
+    /* Sections */
     section{padding:64px 0}
     .tint{background:var(--tint)}
     .seafoam{background:var(--seafoam)}
@@ -49,7 +64,12 @@
     footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
     footer a{color:#bfdbfe}
 
-    @media (max-width:900px){.hero .inner{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.navlinks{display:none}}
+    @media (max-width:900px){
+      .hero .inner{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
     .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
     .skip:focus{position:static;width:auto;height:auto;padding:.5rem;background:#fffae5;border:1px solid #f1d48f}
     form input, form textarea, form select{width:100%;padding:.8rem;border:1px solid #d8e1ef;border-radius:12px;margin:.5rem 0;background:#fff}
@@ -65,18 +85,20 @@
     "description": "Psychodynamically informed therapy for children, teens, adults, and couples in the South Bay and online across California.",
     "areaServed": "California",
     "url": "https://kellykravchuk.com",
-    "address": {"@type": "PostalAddress","addressLocality": "Hermosa Beach","addressRegion": "CA","addressCountry": "US"}
+    "address": {"@type": "PostalAddress","addressLocality":"Hermosa Beach","addressRegion":"CA","addressCountry":"US"}
   }
   </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
   <header>
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
+          <!-- Use your cropped circle avatar; or remove this <img> for a super-clean header -->
           <img src="assets/headshot-circle.jpg" alt="Kelly Kravchuk" class="logo" />
-            <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
+          <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
         </div>
         <div class="navlinks">
           <a href="#approach">Approach</a>
@@ -89,12 +111,13 @@
   </header>
 
   <main id="main">
+    <!-- HERO -->
     <section class="hero" aria-labelledby="herotitle">
       <div class="container inner">
         <div>
           <p class="kicker">Therapy in the South Bay & Online</p>
-          <h2 id="herotitle" class="title">Compassionate, depth‑oriented therapy that meets you where you are</h2>
-          <p class="subtitle">I integrate psychodynamic formulation with attachment‑ and trauma‑informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
+          <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
+          <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
           <div class="badges" aria-label="Focus areas">
             <span class="badge">Children & Teens</span>
             <span class="badge">Adults & Couples</span>
@@ -102,52 +125,55 @@
             <span class="badge">Anxiety • Perfectionism</span>
             <span class="badge">Relationships • Transitions</span>
           </div>
-          <p><a class="cta" href="#contact">Request a free 15‑minute consult</a></p>
+          <p><a class="cta" href="#contact">Request a free 15-minute consult</a></p>
           <div class="hero-card" role="note">
-            <strong>Note:</strong> I offer telehealth across California and in‑person sessions in Hermosa Beach.
+            <strong>Note:</strong> I offer telehealth across California and in-person sessions in Hermosa Beach.
           </div>
         </div>
-        <div><!-- intentionally empty to reduce repetition --></div>
+        <div><!-- empty right column on desktop for breathing room --></div>
       </div>
     </section>
 
+    <!-- APPROACH -->
     <section id="approach" class="tint" aria-labelledby="approach-title">
       <div class="container two-col">
         <div>
           <h2 id="approach-title">My Approach</h2>
-          <p>I specialize in developmental work with neurodivergent youth and families through parent coaching and <strong>DIR/Floortime‑informed</strong> interventions, as well as <strong>short‑term therapy with emerging adults</strong>. I also work with adults and couples seeking greater connection and ease.</p>
-          <p>Clinically, I’m interested in how early relationships live on inside of us and show up in the here‑and‑now. I use formulation to make sense of patterns like self‑criticism or people‑pleasing, then pair insight with practical skills for regulation, boundaries, and more authentic connection. I bring a strong interest in curiosity, empathy, compassion (toward self and others), and the shared search for meaning and understanding as pathways to growth.</p>
+          <p>I specialize in developmental work with neurodivergent youth and families through parent coaching and <strong>DIR/Floortime-informed</strong> interventions, as well as <strong>short-term therapy with emerging adults</strong>. I also work with adults and couples seeking greater connection and ease.</p>
+          <p>Clinically, I’m interested in how early relationships live on inside of us and show up in the here-and-now. I use formulation to make sense of patterns like self-criticism or people-pleasing, then pair insight with practical skills for regulation, boundaries, and more authentic connection. I bring a strong interest in curiosity, empathy, compassion (toward self and others), and the shared search for meaning and understanding as pathways to growth.</p>
         </div>
         <div class="card">
           <h3>Specialties</h3>
           <div>
             <span class="pill">Anxiety & Panic</span>
-            <span class="pill">Perfectionism & Self‑Criticism</span>
+            <span class="pill">Perfectionism & Self-Criticism</span>
             <span class="pill">Relationships</span>
             <span class="pill">Life Transitions</span>
-            <span class="pill">Neurodiversity‑affirming</span>
+            <span class="pill">Neurodiversity-affirming</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" class="seafoam" aria-labelledby="services-title">
       <div class="container">
         <h2 id="services-title">Services</h2>
         <div class="grid-3">
           <article class="card" aria-labelledby="svc1"><h3 id="svc1">Individual Therapy</h3>
-            <p>Support for children, teens, and adults. Telehealth statewide and in‑person in Hermosa Beach. 50‑minute sessions.</p>
+            <p>Support for children, teens, and adults. Telehealth statewide and in-person in Hermosa Beach. 50-minute sessions.</p>
           </article>
           <article class="card" aria-labelledby="svc2"><h3 id="svc2">Couples Therapy</h3>
-            <p>Attachment‑oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
+            <p>Attachment-oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
           </article>
           <article class="card" aria-labelledby="svc3"><h3 id="svc3">Parent Coaching & Family</h3>
-            <p>Relationship‑centered strategies for co‑regulation, boundaries, and attuned communication.</p>
+            <p>Relationship-centered strategies for co-regulation, boundaries, and attuned communication.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
       <div class="container two-col">
         <div class="about-photo">
@@ -157,31 +183,32 @@
         </div>
         <div>
           <h2 id="about-title">About Kelly</h2>
-          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her), a therapist serving the South Bay and clients across California. I integrate <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma‑informed</strong> care.</p>
+          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her), a therapist serving the South Bay and clients across California. I integrate <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
           <div class="card" aria-label="Training and orientation">
             <h3>Training & Orientation</h3>
             <ul>
               <li>MSW, University of Southern California (USC) — 4.0 GPA</li>
               <li>Registered Associate Clinical Social Worker (ACSW) in California — <strong>Registration #ASW133376</strong>; receiving clinical supervision toward LCSW licensure</li>
-              <li>Psychodynamic & relational · Attachment‑based · Trauma‑informed · Motivational Interviewing (MI) · Acceptance & Commitment Therapy (ACT) · Cognitive Behavioral Therapy (CBT) · Problem‑Solving Therapy (PST)</li>
+              <li>Psychodynamic & relational · Attachment-based · Trauma-informed · Motivational Interviewing (MI) · Acceptance & Commitment Therapy (ACT) · Cognitive Behavioral Therapy (CBT) · Problem-Solving Therapy (PST)</li>
             </ul>
           </div>
           <div class="card" aria-label="Experience highlights">
             <h3>Experience Highlights</h3>
             <ul>
-              <li><strong>Positive Development — Case Manager & Developmental Coach (current)</strong> · Provide parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship‑based intervention. Develop tailored, data‑informed treatment plans that integrate each client’s sensory profile and unique differences, using play as a vehicle for connection and developmental growth. Collaborate within an interdisciplinary team; trained in CPI de‑escalation.</li>
-              <li><strong>Santa Monica College – Center for Wellness & Wellbeing</strong> · Therapist (intern); provided trauma‑informed short‑term therapy to diverse emerging and adult students (individual & couples).</li>
-              <li><strong>Office of Mayor Karen Bass (Los Angeles)</strong> · MSW Fellow in Constituent Services; contributed to multi‑agency initiatives including Language Access and wildfire‑survivor resource coordination.</li>
+              <li><strong>Positive Development — Case Manager & Developmental Coach (current)</strong> · Provide parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship-based intervention. Develop tailored, data-informed treatment plans that integrate each client’s sensory profile and unique differences, using play as a vehicle for connection and developmental growth. Collaborate within an interdisciplinary team; trained in CPI de-escalation.</li>
+              <li><strong>Santa Monica College – Center for Wellness & Wellbeing</strong> · Therapist (intern); provided trauma-informed short-term therapy to diverse emerging and adult students (individual & couples).</li>
+              <li><strong>Office of Mayor Karen Bass (Los Angeles)</strong> · MSW Fellow in Constituent Services; contributed to multi-agency initiatives including Language Access and wildfire-survivor resource coordination.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" aria-labelledby="contact-title">
       <div class="container two-col">
         <div>
-          <h2 id="contact-title">Book a Free 15‑Minute Consult</h2>
+          <h2 id="contact-title">Book a Free 15-Minute Consult</h2>
           <p>Email or send a quick note below. I’ll get back to you within 1–2 business days.</p>
           <p><strong>Email:</strong> <a href="mailto:kellykravchuk@gmail.com">kellykravchuk@gmail.com</a></p>
           <form action="mailto:hello@kellykravchuk.com" method="post" enctype="text/plain">
@@ -197,22 +224,23 @@
         </div>
         <div class="card">
           <h3>Location</h3>
-          <p>In‑person sessions available in Hermosa Beach (ocean‑view office). Exact address provided upon scheduling.</p>
+          <p>In-person sessions available in Hermosa Beach (ocean-view office). Exact address provided upon scheduling.</p>
           <h3>Availability</h3>
           <p>Weekdays and limited evenings. Telehealth across California.</p>
           <p style="font-size:.9rem;color:var(--muted)">Prefer not to call? Email is best for new inquiries.</p>
           <h3>Fees</h3>
-          <p>Out‑of‑pocket; superbills available for out‑of‑network reimbursement. Sliding scale slots may be available.</p>
+          <p>Out-of-pocket; superbills available for out-of-network reimbursement. Sliding scale slots may be available.</p>
         </div>
       </div>
     </section>
 
+    <!-- WRITING -->
     <section id="writing" aria-labelledby="writing-title">
       <div class="container">
         <h2 id="writing-title">Featured Writing</h2>
         <p>I care about service and systems, and occasionally write about community issues and mental health.</p>
         <ul>
-          <li><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Op‑Ed: West Los Angeles Needs to Care About Veteran Homelessness</a> — published across four local outlets.</li>
+          <li><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Op-Ed: West Los Angeles Needs to Care About Veteran Homelessness</a> — published across four local outlets.</li>
           <li><a href="https://muckrack.com/kelly-kravchuk/articles" target="_blank" rel="noopener">More articles by Kelly</a> (MuckRack profile).</li>
         </ul>
       </div>
