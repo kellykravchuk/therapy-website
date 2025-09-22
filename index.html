@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Santa Monica & Telehealth (CA)</title>
-  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, adolescents, adults, and couples in Santa Monica and via telehealth across California." />
+  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Santa Monica & Online</title>
+  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, teens, adults, and couples in Santa Monica and online across California." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -29,11 +29,9 @@
     .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow);transition:transform .08s ease, box-shadow .2s ease}
     .cta:hover{transform:translateY(-1px); box-shadow:0 12px 28px rgba(2,28,71,.12)}
 
-    /* Cresting wave icon (closer to your ref: crest + two swells) */
-    .wave{width:44px;height:44px;display:grid;place-items:center}
+    /* Wave icon */
+    .wave{width:48px;height:48px;display:grid;place-items:center}
     .wave svg{width:100%;height:100%}
-    .wave .crest{fill:#2f6fd6}
-    .wave .swell{fill:#49a1ff}
 
     /* HERO */
     .hero{
@@ -42,9 +40,9 @@
     }
     .hero .inner{
       position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
-      align-items:flex-start;padding:90px 0 56px; /* lowered so text clears birds */
+      align-items:flex-start;padding:90px 0 56px;
     }
-    /* Uniform sheer background behind ALL hero text */
+    /* Uniform sheer background block behind hero text */
     .hero .text-block{
       background:rgba(255,255,255,.72);
       border-radius:16px;
@@ -62,7 +60,7 @@
     .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
 
     /* Sections */
-    section{padding:64px 0; scroll-margin-top:84px;} /* anchor links clear sticky header */
+    section{padding:64px 0; scroll-margin-top:84px;}
     .tint{background:var(--tint)}
     .seafoam{background:var(--seafoam)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -71,10 +69,6 @@
     .card p{margin:.3rem 0 0}
     .pill{display:inline-block;padding:.25rem .6rem;border:1px solid #e1e8f5;border-radius:999px;background:#f8fbff;font-size:.75rem;color:#42526e;margin-right:.35rem;margin-bottom:.35rem}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-
-    /* About photo */
-    .headshot{width:100%;max-width:520px;border-radius:24px;box-shadow:var(--shadow);display:block}
-    .about-photo{display:flex;justify-content:center;align-items:flex-start}
 
     footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
     footer a{color:#bfdbfe}
@@ -96,15 +90,35 @@
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <!-- Cresting wave + two swells -->
+          <!-- New wave icon -->
           <div class="wave" aria-hidden="true">
-            <svg viewBox="0 0 64 48" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
-              <!-- crest -->
-              <path class="crest" d="M40 2c-6.8.3-14 5-16 12-1.6 6 1.2 11.8 6.8 15 7.1 4.1 14.2 2.7 20.7 1 4.8-1.2 8.4-.7 10.5.1-4.9 2.8-11.8 5.9-20.7 5.9C28.6 36 20 28.8 20 19.8 20 10.2 29 .9 40 2z"/>
-              <!-- upper swell -->
-              <path class="swell" d="M2 30c5-4 10-6 16-6 10 0 16 6 26 6 6 0 12-2 18-4-4 5-12 10-22 10-12 0-18-6-26-6-5 0-9 2-12 4z"/>
-              <!-- lower swell -->
-              <path class="swell" d="M2 44c5-4 10-6 16-6 10 0 16 6 26 6 6 0 12-2 18-4-4 5-12 10-22 10-12 0-18-6-26-6-5 0-9 2-12 4z"/>
+            <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+              <defs>
+                <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#1fa2ff"/>
+                  <stop offset="1" stop-color="#54d6ff"/>
+                </linearGradient>
+              </defs>
+              <!-- Crest -->
+              <path d="M10 58
+                       C 28 36, 48 20, 72 20
+                       c 14 0, 26 6, 36 15
+                       c -10 -2 -20 -1 -30 2
+                       c -12 4 -22 11 -28 20
+                       c -8 0 -16 -3 -20 -7 z"
+                    fill="url(#waveGrad)" />
+              <!-- Upper swell -->
+              <path d="M6 62
+                       C 22 52, 42 52, 58 62
+                       S 94 72, 114 62"
+                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
+                    stroke-linecap="round" stroke-linejoin="round" />
+              <!-- Lower swell -->
+              <path d="M6 74
+                       C 22 64, 42 64, 58 74
+                       S 94 84, 114 74"
+                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
+                    stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
           <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
@@ -139,7 +153,6 @@
             <strong>Note:</strong> I offer telehealth across California and <em>Walk and Talk Therapy on the strand by the ocean in Santa Monica</em>.
           </div>
         </div>
-        <div><!-- empty right column for breathing room --></div>
       </div>
     </section>
 
@@ -214,9 +227,9 @@
           <div class="card" aria-label="Experience highlights">
             <h3>Experience Highlights</h3>
             <ul>
-              <li><strong>Positive Development – Case Manager & Developmental Coach </strong> · Parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship-based intervention. Tailored, data-informed treatment plans that integrate each client’s sensory profile and unique differences; play as a vehicle for connection and growth. Interdisciplinary collaboration; CPI de-escalation training.</li>
-              <li><strong>Santa Monica College – Therapist MSW Fellow in Center for Wellness & Wellbeing</strong> · Provided trauma-informed therapy to diverse emerging and adult students (individual & couples).</li>
-              <li><strong>Office of Mayor Karen Bass (Los Angeles) – MSW Fellow in Constituent Services </strong> · Contributed to multi-agency initiatives including <strong>Language Access, Animal Services,</strong> and <strong>wildfire-survivor resource coordination</strong>.</li>
+              <li><strong>Positive Development — Case Manager & Developmental Coach (current)</strong> — Parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship-based intervention. Tailored, data-informed treatment plans that integrate each client’s sensory profile and unique differences; play as a vehicle for connection and growth. Interdisciplinary collaboration; CPI de-escalation training.</li>
+              <li><strong>Santa Monica College — Center for Wellness & Wellbeing</strong> — Therapist (intern); provided trauma-informed therapy to diverse emerging and adult students (individual & couples).</li>
+              <li><strong>Office of Mayor Karen Bass (Los Angeles) — MSW Fellow in Constituent Services</strong> — Contributed to multi-agency initiatives including <strong>Language Access, Animal Services,</strong> and <strong>wildfire-survivor resource coordination</strong>.</li>
             </ul>
           </div>
         </div>
@@ -236,45 +249,6 @@
             <label for="email">Email</label>
             <input id="email" name="email" type="email" required placeholder="you@example.com" />
             <label for="message">Brief message</label>
-            <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
-            <button type="submit">Send</button>
-            <p class="muted" style="font-size:.85rem;color:var(--muted)">Submitting will open your email client to send the message. Prefer direct email? Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.</p>
-          </form>
-        </div>
-        <div class="card">
-          <h3>Location</h3>
-          <p>Telehealth across California and <em>Walk and Talk Therapy</em> on the strand by the ocean in Santa Monica.</p>
-          <h3>Availability</h3>
-          <p>Weekdays and limited evenings.</p>
-          <p><strong>Email for new inquiries.</strong></p>
-          <h3>Fees</h3>
-          <p>Out-of-pocket; superbills available for out-of-network reimbursement. Sliding scale slots may be available.</p>
-        </div>
-      </div>
-    </section>
+            <textarea id="message" name="message" rows="5" placeholder="What would
 
-    <!-- WRITING -->
-    <section id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <h2 id="writing-title">Featured Writing</h2>
-        <p>I care about service and systems, and occasionally write about community issues and mental health.</p>
-        <ul>
-          <li><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Op-Ed: West Los Angeles Needs to Care About Veteran Homelessness</a> — published across four local outlets.</li>
-          <li><a href="https://muckrack.com/kelly-kravchuk/articles" target="_blank" rel="noopener">More articles by Kelly</a> (MuckRack profile).</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container">
-      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW · Santa Monica & Telehealth (CA) · <a href="#contact">Contact</a></p>
-      <p style="opacity:.8;font-size:.9rem">This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+            
