@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in West LA & Online</title>
-  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, adolescents, adults, and couples in West LA and online across California." />
+  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Santa Monica & Telehealth (CA)</title>
+  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, adolescents, adults, and couples in Santa Monica and via telehealth across California." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -32,27 +32,34 @@
     /* Upright wave icon */
     .wave{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#9ec9ff,#dfeeff);box-shadow:inset 0 0 0 1px #c6dbff;display:grid;place-items:center}
     .wave svg{width:24px;height:24px;fill:#2f6fd6;transform:translateY(1px)}
-    /* SVG is a cresting wave (upright). */
 
-    /* HERO — full-bleed image, NO overlay film; text lowered more */
+    /* HERO — full-bleed image, NO overlay film; text positioned to clear birds */
     .hero{
       position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
       background:url('assets/ocean-hero.jpg') center / cover no-repeat;
     }
     .hero .inner{
       position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
-      align-items:flex-start;padding:68px 0 56px; /* lowered more so subtitle clears birds */
+      align-items:flex-start;padding:76px 0 56px; /* lowered a bit more */
     }
 
     .kicker{color:#0e3a8a;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
-    .title{font-family:"Playfair Display",serif;line-height:1.12;font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1rem;color:#0f172a}
+    .title{font-family:"Playfair Display",serif;line-height:1.12;font-size:clamp(2rem,5vw,3.2rem);margin:.6rem 0 1rem;color:#0f172a}
+    /* Soft background chip behind the HEADLINE text only */
+    .chip{
+      display:inline;
+      background:rgba(255,255,255,.72);
+      border-radius:12px;
+      padding:.1em .35em;
+      box-shadow:0 2px 12px rgba(0,0,0,.08);
+    }
     .subtitle{color:#2f3a4a;font-size:1.05rem}
     .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}
     .badge{padding:.35rem .6rem;border-radius:999px;border:1px solid #dfe6f2;background:#f6f9ff;color:#2b3a55;font-size:.8rem;font-weight:600}
     .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
 
     /* Sections */
-    section{padding:64px 0; scroll-margin-top:84px;} /* anchors clear sticky header */
+    section{padding:64px 0; scroll-margin-top:84px;}
     .tint{background:var(--tint)}
     .seafoam{background:var(--seafoam)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -70,7 +77,7 @@
     footer a{color:#bfdbfe}
 
     @media (max-width:900px){
-      .hero .inner{grid-template-columns:1fr; padding:56px 0 56px}
+      .hero .inner{grid-template-columns:1fr; padding:64px 0 56px}
       .grid-3{grid-template-columns:1fr}
       .two-col{grid-template-columns:1fr}
       .navlinks{display:none}
@@ -87,10 +94,10 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Kelly Kravchuk, MSW, ACSW (ASW133376)",
-    "description": "Psychodynamically informed therapy for children, adolescents, adults, and couples in West LA and online across California.",
+    "description": "Psychodynamically informed therapy for children, adolescents, adults, and couples in Santa Monica and via telehealth across California.",
     "areaServed": "California",
     "url": "https://kellykravchuk.com",
-    "address": {"@type": "PostalAddress","addressLocality":"Los Angeles","addressRegion":"CA","addressCountry":"US"}
+    "address": {"@type": "PostalAddress","addressLocality":"Santa Monica","addressRegion":"CA","addressCountry":"US"}
   }
   </script>
 </head>
@@ -104,7 +111,6 @@
           <!-- Upright wave symbol -->
           <div class="wave" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-              <!-- Upright cresting wave -->
               <path d="M4 15c2.5 0 4-1.2 5.3-2.3 1.1-.9 1.9-1.7 3.2-1.7 1.6 0 2.6 1 2.6 2.4 0 .8-.3 1.5-.8 2.1H17c1.9 0 3-1.3 3-3.2 0-3.1-2.7-5.3-5.8-5.3-2.1 0-3.6 1-4.8 2.1C8.1 9.9 7.1 11 5 11H4v4z"/>
             </svg>
           </div>
@@ -125,8 +131,8 @@
     <section class="hero" aria-labelledby="herotitle">
       <div class="container inner">
         <div>
-          <p class="kicker">Therapy in West LA & Online</p>
-          <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
+          <p class="kicker">Therapy in Santa Monica & Telehealth (CA)</p>
+          <h2 id="herotitle" class="title"><span class="chip">Compassionate, depth-oriented therapy that meets you where you are</span></h2>
           <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
           <div class="badges" aria-label="Focus areas">
             <span class="badge">Children & Teens</span>
@@ -137,7 +143,7 @@
           </div>
           <p><a class="cta" href="#contact">Request a free 15-minute consult</a></p>
           <div class="hero-card" role="note">
-            <strong>Note:</strong> I offer telehealth across California and <em>in-person walk-and-talk sessions in Santa Monica</em>.
+            <strong>Note:</strong> I offer telehealth across California and <em>Walk and Talk Therapy on the strand by the ocean in Santa Monica</em>.
           </div>
         </div>
         <div><!-- empty right column on desktop for breathing room --></div>
@@ -181,7 +187,7 @@
         <h2 id="services-title">Services</h2>
         <div class="grid-3">
           <article class="card" aria-labelledby="svc1"><h3 id="svc1">Individual Therapy</h3>
-            <p>Support for children, teens, and adults. Telehealth statewide and in-person in West LA.</p>
+            <p>Support for children, teens, and adults. Telehealth statewide and in-person in Santa Monica.</p>
           </article>
           <article class="card" aria-labelledby="svc2"><h3 id="svc2">Couples Therapy</h3>
             <p>Attachment-oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
@@ -203,7 +209,7 @@
         </div>
         <div>
           <h2 id="about-title">About Kelly</h2>
-          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her). I serve clients across California via telehealth and in West LA for in-person walk-and-talk. My work integrates <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
+          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her). I serve clients across California via telehealth and in Santa Monica for in-person walk-and-talk. My work integrates <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
           <div class="card" aria-label="Training and orientation">
             <h3>Training & Orientation</h3>
             <ul>
@@ -244,10 +250,10 @@
         </div>
         <div class="card">
           <h3>Location</h3>
-          <p>Telehealth across California and in-person <em>walk-and-talk</em> sessions in Santa Monica.</p>
+          <p>Telehealth across California and <em>Walk and Talk Therapy</em> on the strand by the ocean in Santa Monica.</p>
           <h3>Availability</h3>
           <p>Weekdays and limited evenings.</p>
-          <p style="font-size:.9rem;color:var(--muted)">Prefer not to call? Email is best for new inquiries.</p>
+          <p><strong>Email for new inquiries.</strong></p>
           <h3>Fees</h3>
           <p>Out-of-pocket; superbills available for out-of-network reimbursement. Sliding scale slots may be available.</p>
         </div>
@@ -269,7 +275,7 @@
 
   <footer role="contentinfo">
     <div class="container">
-      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW · West LA & Telehealth (CA) · <a href="#contact">Contact</a></p>
+      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW · Santa Monica & Telehealth (CA) · <a href="#contact">Contact</a></p>
       <p style="opacity:.8;font-size:.9rem">This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).</p>
     </div>
   </footer>
