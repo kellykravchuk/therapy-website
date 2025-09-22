@@ -40,9 +40,8 @@
     }
     .hero .inner{
       position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
-      align-items:flex-start;padding:90px 0 56px; /* adjust first value to move text down/up */
+      align-items:flex-start;padding:90px 0 56px;
     }
-    /* Uniform sheer background block behind hero text */
     .hero .text-block{
       background:rgba(255,255,255,.72);
       border-radius:16px;
@@ -60,7 +59,7 @@
     .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
 
     /* Sections */
-    section{padding:64px 0; scroll-margin-top:84px;} /* anchors clear sticky header */
+    section{padding:64px 0; scroll-margin-top:84px;}
     .tint{background:var(--tint)}
     .seafoam{background:var(--seafoam)}
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
@@ -84,15 +83,20 @@
       .headshot{ max-width:360px; }
     }
 
-    /* Form font fix */
-    form input, 
-    form textarea, 
-    form button, 
-    form select {
-      font-family: inherit;
-      font-size: 1rem;
-      line-height: 1.5;
+    /* Form layout + font fix */
+    form{display:grid;gap:1rem;margin-top:1rem}
+    form label{font-weight:600;font-size:.95rem;margin-bottom:.25rem;display:block}
+    form input, form textarea, form button, form select{
+      font-family:inherit;font-size:1rem;line-height:1.5;
     }
+    form input, form textarea{
+      width:100%;padding:.6rem .75rem;border:1px solid #d0d7e2;border-radius:8px;background:#fff
+    }
+    form textarea{resize:vertical}
+    form button{
+      width:fit-content;padding:.6rem 1.2rem;border:none;border-radius:8px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer;transition:background .2s ease
+    }
+    form button:hover{background:#2563eb}
 
     footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
     footer a{color:#bfdbfe}
@@ -265,17 +269,29 @@
           <h2 id="contact-title">Book a Free 15-Minute Consult</h2>
           <p>Email or send a quick note below. I’ll get back to you within 1–2 business days.</p>
           <p><strong>Email:</strong> <a href="mailto:kellykravchuk@gmail.com">kellykravchuk@gmail.com</a></p>
+
+          <!-- Clean, vertical form layout -->
           <form action="mailto:hello@kellykravchuk.com" method="post" enctype="text/plain">
-            <label for="name">Your name</label>
-            <input id="name" name="name" required placeholder="Your full name" />
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            <label for="message">Brief message</label>
-            <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
+            <div>
+              <label for="name">Your name</label>
+              <input id="name" name="name" required placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="message">Brief message</label>
+              <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
+            </div>
             <button type="submit">Send</button>
-            <p class="muted" style="font-size:.85rem;color:var(--muted)">Submitting will open your email client to send the message. Prefer direct email? Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.</p>
+            <p class="muted" style="font-size:.85rem;color:var(--muted)">
+              Submitting will open your email client to send the message. Prefer direct email?
+              Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.
+            </p>
           </form>
         </div>
+
         <div class="card">
           <h3>Location</h3>
           <p>Telehealth across California and <em>Walk and Talk Therapy</em> on the strand by the ocean in Santa Monica.</p>
