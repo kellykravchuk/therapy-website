@@ -1,316 +1,819 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <title>Kelly Kravchuk, MSW, ACSW – Psychodynamic & Trauma-Informed Therapy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Santa Monica & Telehealth (CA)</title>
-  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, teens, adults, and couples in Santa Monica and via telehealth across California." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Psychodynamic and trauma-informed therapy for adults navigating anxiety, self-doubt, relationship patterns, and emotional overwhelm. Online across California and walk-and-talk sessions in Santa Monica."
+  />
+
+  <!-- Optional Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
   <style>
-    :root{
-      --bg:#ffffff; --ink:#111827; --muted:#5f6b7a; --brand:#3b82f6;
-      --tint:#edf7ff; --seafoam:#eaf6f3; --card:#ffffff;
-      --radius:20px; --shadow:0 10px 30px rgba(2,28,71,.08);
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{width:min(1100px,92%);margin:0 auto}
-
-    /* Header */
-    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e9eef5;z-index:50}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;gap:.75rem;align-items:center}
-    .brand h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:.2px;color:#0f172a}
-    .navlinks a{margin-left:1rem;font-weight:600;color:#2a3545}
-    .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow);transition:transform .08s ease, box-shadow .2s ease}
-    .cta:hover{transform:translateY(-1px); box-shadow:0 12px 28px rgba(2,28,71,.12)}
-
-    /* Wave icon */
-    .wave{width:48px;height:48px;display:grid;place-items:center}
-    .wave svg{width:100%;height:100%}
-
-    /* HERO */
-    .hero{
-      position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
-      background:url('assets/ocean-hero.jpg') center / cover no-repeat;
-    }
-    .hero .inner{
-      position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
-      align-items:flex-start;padding:90px 0 56px;
-    }
-    .hero .text-block{
-      background:rgba(255,255,255,.72);
-      border-radius:16px;
-      padding:1.25rem 1.5rem;
-      box-shadow:0 4px 24px rgba(0,0,0,.08);
-      max-width:680px;
+    :root {
+      --bg: #f4f5f7;
+      --bg-card: #ffffff;
+      --text-main: #1c1f23;
+      --text-muted: #555b65;
+      --accent: #315e8c;
+      --accent-soft: rgba(49, 94, 140, 0.08);
+      --border-soft: #e2e4ea;
+      --max-width: 1040px;
+      --radius-card: 22px;
+      --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.08);
     }
 
-    .kicker{color:#0e3a8a;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin:0}
-    .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3.2rem);margin:.6rem 0 1rem;color:#0f172a}
-    .subtitle{color:#2f3a4a;font-size:1.05rem;margin:0 0 1rem}
-
-    .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}
-    .badge{padding:.35rem .6rem;border-radius:999px;border:1px solid #dfe6f2;background:#f6f9ff;color:#2b3a55;font-size:.8rem;font-weight:600}
-    .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
-
-    /* Sections */
-    section{padding:64px 0; scroll-margin-top:84px;}
-    .tint{background:var(--tint)}
-    .seafoam{background:var(--seafoam)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-    .card{background:var(--card);border:1px solid #e9eef5;border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)}
-    .card h3{margin:.2rem 0 .4rem}
-    .card p{margin:.3rem 0 0}
-    .pill{display:inline-block;padding:.25rem .6rem;border:1px solid #e1e8f5;border-radius:999px;background:#f8fbff;font-size:.75rem;color:#42526e;margin-right:.35rem;margin-bottom:.35rem}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-
-    /* About photo sizing */
-    .about-photo img,
-    .headshot{
-      width:100%;
-      max-width:520px;
-      height:auto;
-      border-radius:24px;
-      box-shadow:var(--shadow);
-      display:block;
-    }
-    @media (max-width:900px){
-      .headshot{ max-width:360px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Form layout + font fix */
-    form{display:grid;gap:1rem;margin-top:1rem}
-    form label{font-weight:600;font-size:.95rem;margin-bottom:.25rem;display:block}
-    form input, form textarea, form button, form select{
-      font-family:inherit;font-size:1rem;line-height:1.5;
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    form input, form textarea{
-      width:100%;padding:.6rem .75rem;border:1px solid #d0d7e2;border-radius:8px;background:#fff
-    }
-    form textarea{resize:vertical}
-    form button{
-      width:fit-content;padding:.6rem 1.2rem;border:none;border-radius:8px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer;transition:background .2s ease
-    }
-    form button:hover{background:#2563eb}
 
-    footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
-    footer a{color:#bfdbfe}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    @media (max-width:900px){
-      .hero .inner{grid-template-columns:1fr; padding:76px 0 56px}
-      .grid-3{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
-      .navlinks{display:none}
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(244, 245, 247, 0.9);
+      border-bottom: 1px solid rgba(226, 228, 234, 0.9);
+    }
+
+    .nav-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #3a7bb8, #5fb0d9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-logo::before {
+      content: "";
+      position: absolute;
+      inset: 40% -10% 0;
+      background: radial-gradient(circle at 0 100%, rgba(255, 255, 255, 0.8), transparent);
+      opacity: 0.9;
+    }
+
+    .brand-text {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      font-size: 0.92rem;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: rgba(49, 94, 140, 0.3);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.52rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #fefefe;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 14px 35px rgba(20, 60, 110, 0.35);
+      cursor: pointer;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      background: #27496b;
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(20, 60, 110, 0.45);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .hero {
+      padding: 2.25rem 1.25rem 2.4rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .hero-copy-eyebrow {
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: clamp(1.9rem, 3.2vw, 2.3rem);
+      line-height: 1.2;
+      margin-bottom: 0.7rem;
+      color: #111827;
+    }
+
+    .hero-subtitle {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .hero-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem 1.1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-list span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #1e2933;
+    }
+
+    .hero-list-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #2b527b;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-cta-secondary {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-card);
+      background: var(--bg-card);
+      box-shadow: var(--shadow-soft);
+      padding: 0.6rem;
+    }
+
+    .hero-headshot {
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+      max-height: 420px;
+    }
+
+    .hero-tag {
+      position: absolute;
+      bottom: 0.9rem;
+      left: 0.9rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      font-size: 0.8rem;
+      color: #111827;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #28a37a;
+    }
+
+    .section {
+      padding: 0.4rem 1.25rem 2.5rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .section--single {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .section-heading {
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subheading {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      padding: 1.4rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+    }
+
+    .card + .card {
+      margin-top: 1.2rem;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: #eef2f7;
+      color: #374151;
+    }
+
+    .list {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+    }
+
+    .list li {
+      margin-bottom: 0.28rem;
+    }
+
+    .two-col-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.25rem 1.4rem;
+      padding: 0;
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+
+    .two-col-list li {
+      position: relative;
+      padding-left: 0.8rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .two-col-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .about-meta {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .about-card h3 {
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card ul {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+    }
+
+    .about-card li {
+      margin-bottom: 0.25rem;
+    }
+
+    .cta-band {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 2rem 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .cta-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cta-inner h2 {
+      font-family: "Playfair Display", "Georgia", serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .cta-inner p {
+      font-size: 0.9rem;
+      max-width: 25rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .cta-inner .btn-primary {
+      background: #ffffff;
+      color: #1f2933;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.45);
+    }
+
+    .cta-inner .btn-primary:hover {
+      background: #f3f4f6;
+    }
+
+    footer {
+      padding: 1.4rem 1.25rem 1.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 0.8rem;
+    }
+
+    .footer-inner a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero-inner,
+      .section-inner,
+      .about-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 1.4rem;
+      }
+
+      .hero-media {
+        order: -1;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .nav-inner {
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-card {
+        padding: 0.5rem;
+      }
+      .hero-inner {
+        gap: 1.4rem;
+      }
+      .section {
+        padding-bottom: 2rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Primary">
+  <div class="page">
+    <header>
+      <div class="nav-inner">
         <div class="brand">
-          <!-- Wave icon -->
-          <div class="wave" aria-hidden="true">
-            <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
-              <defs>
-                <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#1fa2ff"/>
-                  <stop offset="1" stop-color="#54d6ff"/>
-                </linearGradient>
-              </defs>
-              <path d="M10 58 C 28 36, 48 20, 72 20 c 14 0, 26 6, 36 15 c -10 -2 -20 -1 -30 2 c -12 4 -22 11 -28 20 c -8 0 -16 -3 -20 -7 z"
-                    fill="url(#waveGrad)" />
-              <path d="M6 62 C 22 52, 42 52, 58 62 S 94 72, 114 62"
-                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
-                    stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6 74 C 22 64, 42 64, 58 74 S 94 84, 114 74"
-                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
-                    stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
-        </div>
-        <div class="navlinks">
-          <a href="#approach">Approach</a>
-          <a href="#services">Services</a>
-          <a href="#about">About</a>
-          <a href="#contact" class="cta">Book a consult</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="herotitle">
-      <div class="container inner">
-        <div class="text-block">
-          <p class="kicker">Therapy in Santa Monica & Telehealth (CA)</p>
-          <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
-          <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
-          <div class="badges" aria-label="Focus areas">
-            <span class="badge">Children & Teens</span>
-            <span class="badge">Adults & Couples</span>
-            <span class="badge">Parent Coaching</span>
-            <span class="badge">Anxiety • Perfectionism</span>
-            <span class="badge">Relationships • Transitions</span>
-          </div>
-          <p><a class="cta" href="#contact">Request a free 15-minute consult</a></p>
-          <div class="hero-card" role="note">
-            <strong>Note:</strong> I offer telehealth across California and <em>Walk and Talk Therapy on the strand by the ocean in Santa Monica</em>.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section id="approach" class="tint" aria-labelledby="approach-title">
-      <div class="container two-col">
-        <div>
-          <h2 id="approach-title">My Approach</h2>
-          <p>I want to get to know <em>you</em>. I approach every client with <strong>curiosity and empathy</strong>, working collaboratively at a pace that feels safe. I integrate <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
-
-          <p>I specialize in developmental work with <strong>neurotypical and neurodivergent youth and families</strong>—including parent coaching and <strong>DIR/Floortime-informed</strong> interventions—as well as <strong>depth-oriented therapy with children, adolescents, and adults of all ages</strong>. I also work with couples seeking greater connection and ease, drawing from <strong>Emotionally Focused Therapy (EFT)</strong> and <strong>Attachment Theory</strong>.</p>
-
-          <p>Clinically, I’m interested in how early relationships live on inside of us and show up in the here-and-now—our <strong>sense of self</strong>, the <strong>roles</strong> we take on in different relationships and settings, and the ways our <strong>environments and interpersonal systems</strong> shape us (and how we contribute to them). I use formulation to understand patterns like self-criticism or people-pleasing, then pair insight with practical skills for regulation, boundaries, and more authentic connection. I also take a <strong>holistic approach to wellness</strong>, attending to sleep, nutrition, physical activity, social connection, and cognitive nourishment.</p>
-        </div>
-
-        <div class="card" aria-label="Specialties">
-          <h3>I specialize in</h3>
+          <div class="brand-logo"></div>
           <div>
-            <span class="pill">Anxiety</span>
-            <span class="pill">Depression</span>
-            <span class="pill">Children</span>
-            <span class="pill">Adolescents</span>
-            <span class="pill">Adults</span>
-            <span class="pill">Couples</span>
-            <span class="pill">Parent coaching</span>
-            <span class="pill">Developmental support</span>
-            <span class="pill">DIR/Floortime</span>
-            <span class="pill">Autism</span>
-            <span class="pill">Executive functioning</span>
+            <div class="brand-text">Kelly Kravchuk, MSW, ACSW</div>
+            <div class="brand-sub">Registered Associate Clinical Social Worker · ASW133376</div>
           </div>
         </div>
+        <nav>
+          <ul>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li>
+              <a
+                href="mailto:kellykravchuk.therapy@gmail.com?subject=Therapy consultation"
+                class="btn-primary"
+              >
+                Book a consult
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- SERVICES -->
-    <section id="services" class="seafoam" aria-labelledby="services-title">
-      <div class="container">
-        <h2 id="services-title">Services</h2>
-        <div class="grid-3">
-          <article class="card" aria-labelledby="svc1"><h3 id="svc1">Individual Therapy</h3>
-            <p>Support for children, teens, and adults. Telehealth statewide and in-person in Santa Monica.</p>
-          </article>
-          <article class="card" aria-labelledby="svc2"><h3 id="svc2">Couples Therapy</h3>
-            <p>Attachment-oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
-          </article>
-          <article class="card" aria-labelledby="svc3"><h3 id="svc3">Parent Coaching & Family</h3>
-            <p>Relationship-centered strategies for co-regulation, boundaries, and attuned communication.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" aria-labelledby="about-title">
-      <div class="container two-col">
-        <div class="about-photo">
-          <figure style="margin:0">
-            <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Kelly Kravchuk, MSW, ACSW (ASW133376)" />
-          </figure>
-        </div>
-        <div>
-          <h2 id="about-title">About Kelly</h2>
-          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her). I serve clients across California via telehealth and in Santa Monica for in-person Walk and Talk Therapy. My work integrates <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
-          <div class="card" aria-label="Training and orientation">
-            <h3>Training & Orientation</h3>
-            <ul>
-              <li>MSW, University of Southern California (USC) — 4.0 GPA</li>
-              <li>Registered Associate Clinical Social Worker (ACSW) — <strong>Registration #ASW133376</strong>; receiving clinical supervision toward LCSW licensure</li>
-              <li>Psychodynamic & relational · Attachment-based · Trauma-informed · Motivational Interviewing (MI) · Acceptance & Commitment Therapy (ACT) · Cognitive Behavioral Therapy (CBT) · Problem-Solving Therapy (PST)</li>
-            </ul>
-          </div>
-          <div class="card" aria-label="Experience highlights">
-            <h3>Experience Highlights</h3>
-            <ul>
-              <li><strong>Positive Development — Case Manager & Developmental Coach (current)</strong> — Facilitate parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship-based intervention. Craft tailored, data-informed treatment plans that integrate each client’s sensory profile and unique differences; activate play as a vehicle for connection and growth. Engage in interdisciplinary collaboration; CPI de-escalation training.</li>
-              <li><strong>Santa Monica College — Center for Wellness & Wellbeing — Therapist (MSW Intern)</strong> — Provided trauma-informed therapy to a diverse group of emerging and middle-aged adult students (individual & couples).</li>
-              <li><strong>Office of Mayor Karen Bass (Los Angeles) — MSW Fellow in Constituent Services</strong> — Contributed to multi-agency initiatives including <strong>Language Access, Animal Services,</strong> and <strong>wildfire-survivor resource coordination</strong> collaborating at the city, county, state and federal levels.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container two-col">
-        <div>
-          <h2 id="contact-title">Book a Free 15-Minute Consult</h2>
-          <p>Email or send a quick note below. I’ll get back to you within 1–2 business days.</p>
-          <p><strong>Email:</strong> <a href="mailto:kellykravchuk@gmail.com">kellykravchuk@gmail.com</a></p>
-
-          <form action="mailto:hello@kellykravchuk.com" method="post" enctype="text/plain">
-            <div>
-              <label for="name">Your name</label>
-              <input id="name" name="name" required placeholder="Your full name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required placeholder="you@example.com" />
-            </div>
-            <div>
-              <label for="message">Brief message</label>
-              <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
-            </div>
-            <button type="submit">Send</button>
-            <p class="muted" style="font-size:.85rem;color:var(--muted)">
-              Submitting will open your email client to send the message. Prefer direct email?
-              Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-copy-eyebrow">Psychodynamic &amp; Trauma-Informed Therapy</div>
+            <h1 class="hero-title">
+              Attuned therapy for adults navigating anxiety, relationships, and self-doubt.
+            </h1>
+            <p class="hero-subtitle">
+              If you move through life appearing composed while holding quiet overwhelm, I offer a
+              grounded space to understand what’s underneath and develop more steady, authentic ways
+              of relating to yourself and others.
             </p>
-          </form>
-        </div>
 
-        <div class="card">
-          <h3>Location</h3>
-          <p>Telehealth across California and <em>Walk and Talk Therapy</em> on the strand by the ocean in Santa Monica.</p>
-          <h3>Availability</h3>
-          <p>Weekdays and limited evenings.</p>
-          <p><strong>Email for new inquiries.</strong></p>
-          <h3>Fees</h3>
-          <p>Out-of-pocket; superbills available for out-of-network reimbursement. Sliding scale slots may be available.</p>
+            <div class="hero-list">
+              <span><span class="hero-list-dot"></span> Anxiety &amp; emotional overwhelm</span>
+              <span><span class="hero-list-dot"></span> Relationship &amp; attachment patterns</span>
+              <span><span class="hero-list-dot"></span> Self-criticism &amp; people-pleasing</span>
+              <span><span class="hero-list-dot"></span> Life transitions &amp; identity</span>
+            </div>
+
+            <div class="hero-cta-row">
+              <a
+                href="mailto:kellykravchuk.therapy@gmail.com?subject=Therapy consultation"
+                class="btn-primary"
+              >
+                Book a free 15-minute consultation
+              </a>
+              <div class="hero-cta-secondary">
+                Online across California • Walk-and-talk sessions in Santa Monica
+              </div>
+            </div>
+            <div class="hero-note">
+              Fee: $175 per 50-minute session · Reduced-fee options available for a limited number
+              of clients.
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="hero-card">
+              <div class="hero-headshot">
+                <img src="assets/headshot.jpg" alt="Kelly Kravchuk, therapist" />
+              </div>
+            </div>
+            <div class="hero-tag">
+              <span class="hero-tag-dot"></span>
+              <span>Depth-oriented, relational, and emotionally attuned care.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Approach -->
+      <section id="approach" class="section">
+        <div class="section-inner">
+          <div>
+            <h2 class="section-heading">Therapeutic approach</h2>
+            <p class="section-subheading">
+              Our work is collaborative and paced with care. Together, we bring gentle curiosity to
+              the patterns, beliefs, and protective parts of you that were once necessary but may no
+              longer fit who you’re becoming.
+            </p>
+
+            <div class="card">
+              <h3>Psychodynamic &amp; attachment-based</h3>
+              <p>
+                We explore how past relationships and experiences have shaped the way you see
+                yourself and others today. Understanding these patterns can create relief, clarity,
+                and more choice in the present.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Trauma-informed, not pathologizing</h3>
+              <p>
+                I hold your symptoms in the context of your nervous system, history, and strengths.
+                We move at a pace that feels safe, staying grounded in the present while making
+                space for what has been hard to hold alone.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Mindfulness, curiosity, and emotional language</h3>
+              <p>
+                Together we build your capacity to notice, name, and stay with your inner
+                experience—so you can respond with greater steadiness, self-trust, and compassion.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3>Areas of focus</h3>
+              <ul class="two-col-list">
+                <li>Anxiety &amp; chronic worry</li>
+                <li>Relationship &amp; dating patterns</li>
+                <li>Attachment &amp; trust</li>
+                <li>Self-criticism &amp; shame</li>
+                <li>People-pleasing &amp; boundaries</li>
+                <li>High-functioning burnout</li>
+                <li>Family dynamics</li>
+                <li>Life transitions &amp; identity</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>What therapy can support</h3>
+              <ul class="list">
+                <li>Feeling more rooted and at home in yourself.</li>
+                <li>Understanding why certain patterns keep repeating.</li>
+                <li>Developing boundaries that feel clear, not harsh.</li>
+                <li>Softening self-criticism into a more caring inner voice.</li>
+                <li>Building relationships that feel reciprocal and nourishing.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section">
+        <div class="section-inner">
+          <div>
+            <h2 class="section-heading">Services &amp; fees</h2>
+            <p class="section-subheading">
+              I offer individual therapy for adults in California. Sessions are held virtually via
+              secure video, with limited availability for walk-and-talk sessions in Santa Monica.
+            </p>
+
+            <div class="card">
+              <h3>Individual therapy for adults (18+)</h3>
+              <p>
+                50-minute sessions focused on the concerns most present for you—whether that’s
+                anxiety, relationship stress, questions about identity, or a desire for deeper
+                self-understanding.
+              </p>
+              <div class="pill-row">
+                <span class="pill">Online across California</span>
+                <span class="pill">Walk-and-talk in Santa Monica</span>
+                <span class="pill">Weekday appointments</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3>Fees &amp; reduced-fee options</h3>
+              <p>
+                My standard fee is <strong>$175 per 50-minute session</strong>. I reserve a limited
+                number of reduced-fee spots for clients with financial need. We can discuss your
+                circumstances during a consultation to see what feels sustainable.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3>Insurance &amp; payment</h3>
+              <p>
+                I am an out-of-network provider and do not bill insurance directly. Upon request, I
+                can provide a monthly superbill that you may submit to your insurance for possible
+                reimbursement, depending on your plan.
+              </p>
+              <p style="margin-top: 0.6rem;">
+                Payment is collected at the time of session via card, HSA/FSA card, or bank
+                transfer.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>Getting started</h3>
+              <p>
+                I offer a free 15-minute phone or video consultation to help us get a sense of
+                whether we’d be a good fit. You’re welcome to share a bit about what’s bringing you
+                to therapy and ask any questions about my approach.
+              </p>
+              <p style="margin-top: 0.6rem;">
+                To schedule, click “Book a consult” or email me at
+                <a href="mailto:kellykravchuk.therapy@gmail.com"
+                  >kellykravchuk.therapy@gmail.com</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-inner section--single">
+          <div>
+            <h2 class="section-heading">About Kelly</h2>
+            <p class="section-subheading">
+              I’m Kelly Kravchuk, MSW, ACSW (she/her). I work with adults who are thoughtful,
+              self-aware, and often hard on themselves—people who may look like they have it
+              together on the outside while feeling unsettled, lonely, or unsure on the inside.
+            </p>
+
+            <div class="about-grid">
+              <div class="card about-card">
+                <h3>Training &amp; clinical background</h3>
+                <ul>
+                  <li>
+                    Master of Social Work (MSW), University of Southern California (USC), 4.0 GPA.
+                  </li>
+                  <li>
+                    Registered Associate Clinical Social Worker (ACSW), California Board of
+                    Behavioral Sciences – <strong>ASW133376</strong>.
+                  </li>
+                  <li>
+                    Supervised by Veronica Garcia, LCSW (California · LCS 73772), with a focus on
+                    psychodynamic, relational, and trauma-informed care.
+                  </li>
+                  <li>
+                    Clinical experience in community mental health, developmental work with
+                    children and families, and individual work with adults navigating anxiety,
+                    relational stress, and life transitions.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card about-card">
+                <h3>How I show up in the room</h3>
+                <p>
+                  Clients often describe me as warm, thoughtful, and steady. I listen closely for
+                  the meanings beneath your words and the patterns that show up over time. I’m
+                  interested in your inner world—how you make sense of things, what you long for,
+                  and what has felt too tender to say out loud.
+                </p>
+                <p style="margin-top: 0.6rem;">
+                  My hope is that therapy feels like a place where you don’t have to perform or be
+                  “the strong one”—where your experiences are met with care, curiosity, and
+                  respect, and where you can begin to feel more grounded in who you are.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section class="cta-band">
+        <div class="cta-inner">
+          <div>
+            <h2>Ready to explore working together?</h2>
+            <p>
+              If something here resonates with you, I’d be glad to connect. We can use a brief
+              consultation to get a feel for each other and discuss what you’re hoping for in
+              therapy.
+            </p>
+          </div>
+          <a
+            href="mailto:kellykravchuk.therapy@gmail.com?subject=Therapy consultation"
+            class="btn-primary"
+          >
+            Book a free 15-minute consult
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Kelly Kravchuk, MSW, ACSW. All rights reserved.</div>
+        <div>
+          Supervised by Veronica Garcia, LCSW (California · LCS 73772).
+          <span style="margin-left: 0.5rem;">Serving clients throughout California via telehealth.</span>
         </div>
       </div>
-    </section>
-
-    <!-- WRITING -->
-    <section id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <h2 id="writing-title">Featured Writing</h2>
-        <p>I care about service and systems, and occasionally write about community issues and mental health.</p>
-        <ul>
-          <li><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Op-Ed: West Los Angeles Needs to Care About Veteran Homelessness</a> — published across four local outlets.</li>
-          <li><a href="https://muckrack.com/kelly-kravchuk/articles" target="_blank" rel="noopener">More articles by Kelly</a> (MuckRack profile).</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="container">
-      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW · Santa Monica & Telehealth (CA) · <a href="#contact">Contact</a></p>
-      <p style="opacity:.8;font-size:.9rem">This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
