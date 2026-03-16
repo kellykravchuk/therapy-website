@@ -3,109 +3,460 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Hermosa Beach & Telehealth (CA)</title>
-  <meta name="description" content="Compassionate, psychodynamically informed therapy for children, teens, adults, and couples in Hermosa Beach and via telehealth across California." />
+  <title>Kelly Kravchuk, MSW, ACSW (ASW133376) – Therapy in Hermosa Beach & Telehealth Across California</title>
+  <meta name="description" content="Warm, depth-oriented therapy in Hermosa Beach and via telehealth across California for high-functioning anxiety, relationships, life transitions, and neurodivergent families." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#ffffff; --ink:#111827; --muted:#5f6b7a; --brand:#3b82f6;
-      --tint:#edf7ff; --seafoam:#eaf6f3; --card:#ffffff;
-      --radius:20px; --shadow:0 10px 30px rgba(2,28,71,.08);
+      --bg:#fffdfb;
+      --ink:#182230;
+      --muted:#5c6778;
+      --brand:#3f7fd8;
+      --brand-dark:#2e67b7;
+      --tint:#eef6ff;
+      --seafoam:#ebf5f2;
+      --sand:#f8f1ea;
+      --blush:#f7ecef;
+      --card:#ffffff;
+      --line:#e5e9f0;
+      --shadow:0 10px 30px rgba(16,24,40,.08);
+      --radius:22px;
+      --max:1120px;
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.65;
+    }
+
+    img,video{max-width:100%;display:block}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{width:min(1100px,92%);margin:0 auto}
+    .container{width:min(var(--max),92%);margin:0 auto}
 
-    /* Header */
-    header{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid #e9eef5;z-index:50}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
-    .brand{display:flex;gap:.75rem;align-items:center}
-    .brand h1{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:.2px;color:#0f172a}
-    .navlinks a{margin-left:1rem;font-weight:600;color:#2a3545}
-    .cta{display:inline-block;padding:.7rem 1rem;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;box-shadow:var(--shadow);transition:transform .08s ease, box-shadow .2s ease}
-    .cta:hover{transform:translateY(-1px); box-shadow:0 12px 28px rgba(2,28,71,.12)}
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,253,251,.88);
+      backdrop-filter:saturate(180%) blur(14px);
+      border-bottom:1px solid var(--line);
+    }
 
-    /* Wave icon */
-    .wave{width:48px;height:48px;display:grid;place-items:center}
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:.95rem 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      min-width:0;
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:1.02rem;
+      color:#0f172a;
+      font-weight:700;
+      letter-spacing:.15px;
+    }
+
+    .wave{width:46px;height:46px;display:grid;place-items:center;flex:0 0 auto}
     .wave svg{width:100%;height:100%}
 
-    /* HERO */
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+
+    .navlinks a{
+      color:#2a3545;
+      font-weight:600;
+      white-space:nowrap;
+    }
+
+    .cta{
+      display:inline-block;
+      padding:.78rem 1rem;
+      border-radius:12px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:700;
+      box-shadow:var(--shadow);
+      transition:transform .08s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .cta:hover{
+      text-decoration:none;
+      background:var(--brand-dark);
+      transform:translateY(-1px);
+      box-shadow:0 14px 28px rgba(16,24,40,.12);
+    }
+
+    .cta-secondary{
+      display:inline-block;
+      padding:.78rem 1rem;
+      border-radius:12px;
+      border:1px solid #cad4e3;
+      background:rgba(255,255,255,.86);
+      color:#223249;
+      font-weight:600;
+    }
+
+    .cta-secondary:hover{
+      text-decoration:none;
+      background:#fff;
+    }
+
+    section{padding:72px 0;scroll-margin-top:90px}
+
     .hero{
-      position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
-      background:url('assets/ocean-hero.jpg') center / cover no-repeat;
-    }
-    .hero .inner{
-      position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;
-      align-items:flex-start;padding:90px 0 56px;
-    }
-    .hero .text-block{
-      background:rgba(255,255,255,.72);
-      border-radius:16px;
-      padding:1.25rem 1.5rem;
-      box-shadow:0 4px 24px rgba(0,0,0,.08);
-      max-width:680px;
+      min-height:92vh;
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(rgba(255,255,255,.18), rgba(255,255,255,.16)),
+        url('assets/ocean-hero.jpg') center / cover no-repeat;
     }
 
-    .kicker{color:#0e3a8a;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem;margin:0}
-    .title{font-family:"Playfair Display",serif;line-height:1.15;font-size:clamp(2rem,5vw,3.2rem);margin:.6rem 0 1rem;color:#0f172a}
-    .subtitle{color:#2f3a4a;font-size:1.05rem;margin:0 0 1rem}
+    .hero-inner{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:2rem;
+      align-items:start;
+      padding:92px 0 56px;
+    }
 
-    .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}
-    .badge{padding:.35rem .6rem;border-radius:999px;border:1px solid #dfe6f2;background:#f6f9ff;color:#2b3a55;font-size:.8rem;font-weight:600}
-    .hero-card{background:var(--card);border-radius:var(--radius);padding:1.25rem;border:1px solid #e9eef5;box-shadow:var(--shadow)}
+    .text-block{
+      background:rgba(255,255,255,.75);
+      border-radius:18px;
+      padding:1.4rem 1.45rem;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      max-width:720px;
+    }
 
-    /* Sections */
-    section{padding:64px 0; scroll-margin-top:84px;}
+    .kicker{
+      margin:0;
+      color:#124692;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.82rem;
+    }
+
+    .title{
+      margin:.65rem 0 .95rem;
+      font-family:"Playfair Display",serif;
+      line-height:1.1;
+      font-size:clamp(2.15rem,5vw,3.65rem);
+      color:#0f172a;
+    }
+
+    .subtitle{
+      margin:0 0 1rem;
+      color:#2d3a4c;
+      font-size:1.08rem;
+      max-width:62ch;
+    }
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.6rem;
+      margin:1rem 0 1.1rem;
+    }
+
+    .badge{
+      padding:.38rem .68rem;
+      border-radius:999px;
+      border:1px solid #dbe4f0;
+      background:#f8fbff;
+      color:#29405f;
+      font-size:.82rem;
+      font-weight:600;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.8rem;
+      margin:1rem 0;
+    }
+
+    .hero-note{
+      margin-top:.8rem;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:1rem 1.1rem;
+      box-shadow:var(--shadow);
+      color:#314155;
+    }
+
+    .section-intro{
+      max-width:780px;
+      margin-bottom:1.5rem;
+    }
+
+    .section-intro h2,
+    .two-col h2{
+      margin:0 0 .5rem;
+      font-family:"Playfair Display",serif;
+      font-size:2rem;
+      line-height:1.15;
+    }
+
     .tint{background:var(--tint)}
     .seafoam{background:var(--seafoam)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-    .card{background:var(--card);border:1px solid #e9eef5;border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)}
-    .card h3{margin:.2rem 0 .4rem}
-    .card p{margin:.3rem 0 0}
-    .pill{display:inline-block;padding:.25rem .6rem;border:1px solid #e1e8f5;border-radius:999px;background:#f8fbff;font-size:.75rem;color:#42526e;margin-right:.35rem;margin-bottom:.35rem}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .sand{background:var(--sand)}
+    .blush{background:var(--blush)}
 
-    /* About photo sizing */
-    .about-photo img,
-    .headshot{
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.25rem;
+    }
+
+    .grid-4{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1rem;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.6rem;
+      align-items:start;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:1.25rem;
+      box-shadow:var(--shadow);
+      height:100%;
+    }
+
+    .card h3{
+      margin:.15rem 0 .45rem;
+      line-height:1.25;
+    }
+
+    .card p{
+      margin:.25rem 0 0;
+    }
+
+    .card-link{
+      display:block;
+      color:inherit;
+      text-decoration:none;
+      height:100%;
+    }
+
+    .card-link:hover{text-decoration:none}
+    .card-link .card{
+      transition:transform .12s ease, box-shadow .18s ease;
+    }
+
+    .card-link:hover .card{
+      transform:translateY(-2px);
+      box-shadow:0 16px 30px rgba(16,24,40,.12);
+    }
+
+    .link-note{
+      display:inline-block;
+      margin-top:.8rem;
+      color:#3a5b88;
+      font-weight:600;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:.28rem .62rem;
+      border:1px solid #e2e8f1;
+      border-radius:999px;
+      background:#fbfdff;
+      color:#41516b;
+      font-size:.76rem;
+      margin-right:.35rem;
+      margin-bottom:.42rem;
+    }
+
+    .mini-list{
+      padding-left:1.1rem;
+      margin:.6rem 0 0;
+    }
+
+    .mini-list li{margin:.4rem 0}
+
+    .headshot,
+    .painting{
       width:100%;
-      max-width:520px;
-      height:auto;
       border-radius:24px;
       box-shadow:var(--shadow);
+    }
+
+    .about-stack{
+      display:grid;
+      gap:1rem;
+    }
+
+    .painting-caption{
+      font-size:.92rem;
+      color:var(--muted);
+      margin-top:.55rem;
+    }
+
+    .wave-section{
+      position:relative;
+      padding:0;
+      overflow:hidden;
+      min-height:360px;
+      display:flex;
+      align-items:center;
+    }
+
+    .wave-video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(.9) blur(.5px);
+    }
+
+    .wave-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(251,248,244,.55), rgba(251,248,244,.68));
+    }
+
+    .wave-content{
+      position:relative;
+      z-index:2;
+      width:min(760px,92%);
+      margin:0 auto;
+      text-align:center;
+      padding:84px 0;
+    }
+
+    .wave-content h2{
+      font-family:"Playfair Display",serif;
+      font-size:2.1rem;
+      line-height:1.15;
+      margin:0 0 .75rem;
+    }
+
+    .wave-content p{
+      margin:0 auto;
+      max-width:56ch;
+      font-size:1.08rem;
+      color:#2f3b4e;
+    }
+
+    .writing-list{
+      display:grid;
+      gap:1rem;
+      margin-top:1.25rem;
+    }
+
+    .writing-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:1rem 1.1rem;
+      box-shadow:var(--shadow);
+    }
+
+    form{
+      display:grid;
+      gap:1rem;
+      margin-top:1rem;
+    }
+
+    label{
       display:block;
-    }
-    @media (max-width:900px){
-      .headshot{ max-width:360px; }
+      font-weight:600;
+      font-size:.95rem;
+      margin-bottom:.25rem;
     }
 
-    /* Form layout + font fix */
-    form{display:grid;gap:1rem;margin-top:1rem}
-    form label{font-weight:600;font-size:.95rem;margin-bottom:.25rem;display:block}
-    form input, form textarea, form button, form select{
-      font-family:inherit;font-size:1rem;line-height:1.5;
+    input,textarea,button{
+      font-family:inherit;
+      font-size:1rem;
+      line-height:1.5;
     }
-    form input, form textarea{
-      width:100%;padding:.6rem .75rem;border:1px solid #d0d7e2;border-radius:8px;background:#fff
-    }
-    form textarea{resize:vertical}
-    form button{
-      width:fit-content;padding:.6rem 1.2rem;border:none;border-radius:8px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer;transition:background .2s ease
-    }
-    form button:hover{background:#2563eb}
 
-    footer{background:#0f172a;color:#e5e7eb;padding:48px 0;margin-top:30px}
+    input,textarea{
+      width:100%;
+      padding:.72rem .8rem;
+      border:1px solid #d0d8e5;
+      border-radius:10px;
+      background:#fff;
+    }
+
+    textarea{resize:vertical}
+
+    button{
+      width:fit-content;
+      padding:.72rem 1.25rem;
+      border:none;
+      border-radius:10px;
+      background:var(--brand);
+      color:#fff;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .2s ease;
+    }
+
+    button:hover{background:var(--brand-dark)}
+
+    footer{
+      background:#0f172a;
+      color:#e5e7eb;
+      padding:48px 0;
+      margin-top:28px;
+    }
+
     footer a{color:#bfdbfe}
 
+    @media (max-width:1000px){
+      .grid-4{grid-template-columns:repeat(2,1fr)}
+    }
+
     @media (max-width:900px){
-      .hero .inner{grid-template-columns:1fr; padding:76px 0 56px}
+      .hero-inner,
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
       .grid-3{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
       .navlinks{display:none}
+      .hero-inner{padding:76px 0 56px}
+    }
+
+    @media (max-width:640px){
+      .grid-4{grid-template-columns:1fr}
+      .hero-actions{flex-direction:column;align-items:flex-start}
+      .brand h1{font-size:.95rem}
+      .text-block{padding:1.15rem 1.05rem}
+      .wave-content h2{font-size:1.8rem}
     }
   </style>
 </head>
@@ -114,7 +465,6 @@
     <div class="container">
       <nav aria-label="Primary">
         <div class="brand">
-          <!-- Wave icon -->
           <div class="wave" aria-hidden="true">
             <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
               <defs>
@@ -123,22 +473,19 @@
                   <stop offset="1" stop-color="#54d6ff"/>
                 </linearGradient>
               </defs>
-              <path d="M10 58 C 28 36, 48 20, 72 20 c 14 0, 26 6, 36 15 c -10 -2 -20 -1 -30 2 c -12 4 -22 11 -28 20 c -8 0 -16 -3 -20 -7 z"
-                    fill="url(#waveGrad)" />
-              <path d="M6 62 C 22 52, 42 52, 58 62 S 94 72, 114 62"
-                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
-                    stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M6 74 C 22 64, 42 64, 58 74 S 94 84, 114 74"
-                    fill="none" stroke="url(#waveGrad)" stroke-width="6"
-                    stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10 58 C 28 36, 48 20, 72 20 c 14 0, 26 6, 36 15 c -10 -2 -20 -1 -30 2 c -12 4 -22 11 -28 20 c -8 0 -16 -3 -20 -7 z" fill="url(#waveGrad)" />
+              <path d="M6 62 C 22 52, 42 52, 58 62 S 94 72, 114 62" fill="none" stroke="url(#waveGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6 74 C 22 64, 42 64, 58 74 S 94 84, 114 74" fill="none" stroke="url(#waveGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
           <h1>Kelly Kravchuk, MSW, ACSW (ASW133376)</h1>
         </div>
+
         <div class="navlinks">
           <a href="#approach">Approach</a>
-          <a href="#services">Services</a>
+          <a href="#specialties">Specialties</a>
           <a href="#about">About</a>
+          <a href="#writing">Writing</a>
           <a href="#contact" class="cta">Book a consult</a>
         </div>
       </nav>
@@ -146,115 +493,241 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero" aria-labelledby="herotitle">
-      <div class="container inner">
+      <div class="container hero-inner">
         <div class="text-block">
-          <p class="kicker">Therapy in Hermosa Beach & Telehealth (CA)</p>
-          <h2 id="herotitle" class="title">Compassionate, depth-oriented therapy that meets you where you are</h2>
-          <p class="subtitle">I integrate psychodynamic formulation with attachment- and trauma-informed care. Together, we’ll make sense of what hurts, build practical skills, and grow the parts of you that want more freedom, connection, and ease.</p>
+          <p class="kicker">Therapy in Hermosa Beach & Telehealth Across California</p>
+          <h2 id="herotitle" class="title">Warm, depth-oriented therapy for anxiety, relationships, and the parts of you that have had to hold a lot</h2>
+          <p class="subtitle">
+            I work with thoughtful children, teens, adults, couples, and parents who may appear capable on the outside while carrying stress, self-criticism, relational pain, or quiet overwhelm underneath. Together, we make sense of patterns, strengthen regulation, and create more room for connection, clarity, and ease.
+          </p>
+
           <div class="badges" aria-label="Focus areas">
-            <span class="badge">Children & Teens</span>
-            <span class="badge">Adults & Couples</span>
-            <span class="badge">Parent Coaching</span>
-            <span class="badge">Anxiety • Perfectionism</span>
-            <span class="badge">Relationships • Transitions</span>
+            <span class="badge">High-functioning anxiety</span>
+            <span class="badge">Dating & relationships</span>
+            <span class="badge">Neurodivergent families</span>
+            <span class="badge">Burnout & perfectionism</span>
+            <span class="badge">Children, teens & adults</span>
           </div>
-          <p><a class="cta" href="#contact">Request a free 15-minute consult</a></p>
-          <div class="hero-card" role="note">
-            <strong>Note:</strong> I offer telehealth across California and <em>Walk and Talk Therapy on the strand by the ocean in Hermosa Beach</em>.
+
+          <div class="hero-actions">
+            <a class="cta" href="#contact">Request a free 15-minute consult</a>
+            <a class="cta-secondary" href="#specialties">Explore specialties</a>
+          </div>
+
+          <div class="hero-note" role="note">
+            <strong>In-person in Hermosa Beach + telehealth statewide.</strong>
+            I also offer <em>Walk and Talk Therapy</em> on the strand by the ocean in Hermosa Beach.
           </div>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH -->
     <section id="approach" class="tint" aria-labelledby="approach-title">
       <div class="container two-col">
         <div>
           <h2 id="approach-title">My Approach</h2>
-          <p>I want to get to know <em>you</em>. I approach every client with <strong>curiosity and empathy</strong>, working collaboratively at a pace that feels safe. I integrate <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
-
-          <p>I specialize in developmental work with <strong>neurotypical and neurodivergent youth and families</strong>—including parent coaching and <strong>DIR/Floortime-informed</strong> interventions—as well as <strong>depth-oriented therapy with children, adolescents, and adults of all ages</strong>. I also work with couples seeking greater connection and ease, drawing from <strong>Emotionally Focused Therapy (EFT)</strong> and <strong>Attachment Theory</strong>.</p>
-
-          <p>Clinically, I’m interested in how early relationships live on inside of us and show up in the here-and-now—our <strong>sense of self</strong>, the <strong>roles</strong> we take on in different relationships and settings, and the ways our <strong>environments and interpersonal systems</strong> shape us (and how we contribute to them). I use formulation to understand patterns like self-criticism or people-pleasing, then pair insight with practical skills for regulation, boundaries, and more authentic connection. I also take a <strong>holistic approach to wellness</strong>, attending to sleep, nutrition, physical activity, social connection, and cognitive nourishment.</p>
+          <p>
+            I approach therapy with <strong>curiosity, warmth, and care</strong>, working collaboratively at a pace that feels safe enough for honest exploration. My work integrates <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment-based</strong> and <strong>trauma-informed</strong> care.
+          </p>
+          <p>
+            I specialize in developmental work with <strong>neurodivergent youth and families</strong>—including parent coaching and <strong>DIR/Floortime-informed</strong> support—as well as therapy for <strong>adolescents and adults navigating anxiety, perfectionism, burnout, dating stress, and life transitions</strong>.
+          </p>
+          <p>
+            Clinically, I’m interested in how early relationships live on inside of us and shape the ways we protect ourselves: the roles we take on, the patterns we repeat, and the ways our environments and relationships influence our sense of self. I pair insight with practical support for regulation, boundaries, and more authentic connection.
+          </p>
+          <p>
+            I also take a <strong>holistic view of wellness</strong>, attending to sleep, movement, nourishment, social connection, and the conditions that help people feel more alive, steady, and like themselves.
+          </p>
         </div>
 
-        <div class="card" aria-label="Specialties">
-          <h3>I specialize in</h3>
+        <div class="card" aria-label="Areas of focus">
+          <h3>Areas of Focus</h3>
           <div>
-            <span class="pill">Anxiety</span>
-            <span class="pill">Depression</span>
-            <span class="pill">Children</span>
-            <span class="pill">Adolescents</span>
-            <span class="pill">Adults</span>
-            <span class="pill">Couples</span>
+            <span class="pill">High-functioning anxiety</span>
+            <span class="pill">Burnout</span>
+            <span class="pill">Perfectionism</span>
+            <span class="pill">Dating & relationships</span>
+            <span class="pill">Children & adolescents</span>
             <span class="pill">Parent coaching</span>
-            <span class="pill">Developmental support</span>
-            <span class="pill">DIR/Floortime</span>
-            <span class="pill">Autism</span>
-            <span class="pill">Executive functioning</span>
+            <span class="pill">Neurodivergent families</span>
+            <span class="pill">DIR/Floortime-informed</span>
+            <span class="pill">Autism & ADHD support</span>
+            <span class="pill">Emotional regulation</span>
+            <span class="pill">Life transitions</span>
+            <span class="pill">Couples therapy</span>
           </div>
+          <p style="margin-top:1rem;">
+            My work is especially well-suited for thoughtful, sensitive, self-aware people who want more than symptom management alone.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <section id="specialties" class="sand" aria-labelledby="specialties-title">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="specialties-title">Specialties</h2>
+          <p>
+            These are areas I’m especially passionate about. Over time, each can expand into its own page with more detail, FAQs, and resources.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <a class="card-link" href="neurodivergent-families.html">
+            <article class="card">
+              <h3>Neurodivergent Families</h3>
+              <p>Support for parents navigating autism, ADHD, emotional regulation differences, developmental questions, diagnosis, advocacy, and family stress.</p>
+              <span class="link-note">Explore this specialty →</span>
+            </article>
+          </a>
+
+          <a class="card-link" href="high-functioning-anxiety.html">
+            <article class="card">
+              <h3>High-Functioning Anxiety</h3>
+              <p>Therapy for people who appear composed and capable while privately carrying pressure, overthinking, perfectionism, or chronic self-criticism.</p>
+              <span class="link-note">Explore this specialty →</span>
+            </article>
+          </a>
+
+          <a class="card-link" href="dating-and-relationships-los-angeles.html">
+            <article class="card">
+              <h3>Dating & Relationships in Los Angeles</h3>
+              <p>A place to explore anxious attachment, self-worth, emotional unavailability, mixed signals, and the strain of modern dating in LA.</p>
+              <span class="link-note">Explore this specialty →</span>
+            </article>
+          </a>
+
+          <a class="card-link" href="writing.html">
+            <article class="card">
+              <h3>Writing & Public Thought</h3>
+              <p>Essays, op-eds, and reflections on social issues, mental health, relationships, and the larger systems that shape emotional life.</p>
+              <span class="link-note">Read more →</span>
+            </article>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wave-section" aria-labelledby="slowdown-title">
+      <video class="wave-video" autoplay muted loop playsinline>
+        <source src="assets/waves.mp4" type="video/mp4" />
+      </video>
+      <div class="wave-overlay"></div>
+      <div class="wave-content">
+        <h2 id="slowdown-title">Therapy can be a place to slow down enough to hear yourself again</h2>
+        <p>
+          Sometimes healing begins not by pushing harder, but by creating enough steadiness to notice what you feel, what you need, and what has been asking for care.
+        </p>
+      </div>
+    </section>
+
     <section id="services" class="seafoam" aria-labelledby="services-title">
       <div class="container">
-        <h2 id="services-title">Services</h2>
+        <div class="section-intro">
+          <h2 id="services-title">Services</h2>
+          <p>
+            I offer therapy and parent support that is thoughtful, collaborative, and tailored to your needs.
+          </p>
+        </div>
+
         <div class="grid-3">
-          <article class="card" aria-labelledby="svc1"><h3 id="svc1">Individual Therapy</h3>
-            <p>Support for children, teens, and adults. Telehealth statewide and in-person in Hermosa Beach.</p>
+          <article class="card">
+            <h3>Individual Therapy</h3>
+            <p>Support for children, teens, and adults navigating anxiety, relationships, identity, overwhelm, transitions, and emotional pain. Available via telehealth statewide and in person in Hermosa Beach.</p>
           </article>
-          <article class="card" aria-labelledby="svc2"><h3 id="svc2">Couples Therapy</h3>
-            <p>Attachment-oriented couples work to improve communication, repair injuries, and strengthen connection.</p>
+
+          <article class="card">
+            <h3>Couples Therapy</h3>
+            <p>Attachment-oriented couples work to improve communication, repair injuries, slow reactive cycles, and strengthen emotional connection.</p>
           </article>
-          <article class="card" aria-labelledby="svc3"><h3 id="svc3">Parent Coaching & Family</h3>
-            <p>Relationship-centered strategies for co-regulation, boundaries, and attuned communication.</p>
+
+          <article class="card">
+            <h3>Parent Coaching & Family Support</h3>
+            <p>Relationship-centered support for co-regulation, attuned communication, boundaries, developmental understanding, and family emotional climate.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" aria-labelledby="about-title">
       <div class="container two-col">
-        <div class="about-photo">
+        <div class="about-stack">
           <figure style="margin:0">
-            <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Kelly Kravchuk, MSW, ACSW (ASW133376)" />
+            <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Kelly Kravchuk, MSW, ACSW" />
+          </figure>
+
+          <figure style="margin:0">
+            <img class="painting" src="assets/painting.jpg" alt="Abstract painting by Kelly Kravchuk in warm pink, coral, red, and golden tones" />
+            <figcaption class="painting-caption">
+              One of my own paintings. Creative work is part of how I listen, feel, and make meaning.
+            </figcaption>
           </figure>
         </div>
+
         <div>
           <h2 id="about-title">About Kelly</h2>
-          <p>Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her). I serve clients across California via telehealth and in Hermosa Beach for in-person Walk and Talk Therapy. My work integrates <strong>psychodynamic</strong> and <strong>relational</strong> therapy with <strong>attachment</strong> and <strong>trauma-informed</strong> care.</p>
-          <div class="card" aria-label="Training and orientation">
+          <p>
+            Hi, I’m <strong>Kelly Kravchuk, MSW, ACSW (ASW133376)</strong> (she/her). I serve clients across California via telehealth and in Hermosa Beach for in-person therapy and Walk and Talk sessions. My style is warm, attuned, insight-oriented, and collaborative.
+          </p>
+
+          <div class="card" style="margin-bottom:1rem;">
             <h3>Training & Orientation</h3>
-            <ul>
-              <li>MSW, University of Southern California (USC) — 4.0 GPA</li>
-              <li>Registered Associate Clinical Social Worker (ACSW) — <strong>Registration #ASW133376</strong>; receiving clinical supervision toward LCSW licensure</li>
-              <li>Psychodynamic & relational · Attachment-based · Trauma-informed · Motivational Interviewing (MI) · Acceptance & Commitment Therapy (ACT) · Cognitive Behavioral Therapy (CBT) · Problem-Solving Therapy (PST)</li>
+            <ul class="mini-list">
+              <li>MSW, University of Southern California (USC)</li>
+              <li>Registered Associate Clinical Social Worker — <strong>ASW133376</strong>; receiving clinical supervision toward LCSW licensure</li>
+              <li>Psychodynamic & relational · Attachment-based · Trauma-informed · Motivational Interviewing · ACT · CBT · PST</li>
             </ul>
           </div>
-          <div class="card" aria-label="Experience highlights">
+
+          <div class="card">
             <h3>Experience Highlights</h3>
-            <ul>
-              <li><strong>Positive Development — Case Manager & Developmental Coach (current)</strong> — Facilitate parent coaching and developmental support using <strong>DIR/Floortime</strong>, a neurodevelopmental, relationship-based intervention. Craft tailored, data-informed treatment plans that integrate each client’s sensory profile and unique differences; activate play as a vehicle for connection and growth. Engage in interdisciplinary collaboration; CPI de-escalation training.</li>
-              <li><strong>Hermosa Beach College — Center for Wellness & Wellbeing — Therapist (MSW Intern)</strong> — Provided trauma-informed therapy to a diverse group of emerging and middle-aged adult students (individual & couples).</li>
-              <li><strong>Office of Mayor Karen Bass (Los Angeles) — MSW Fellow in Constituent Services</strong> — Contributed to multi-agency initiatives including <strong>Language Access, Animal Services,</strong> and <strong>wildfire-survivor resource coordination</strong> collaborating at the city, county, state and federal levels.</li>
+            <ul class="mini-list">
+              <li><strong>Positive Development</strong> — Clinical work with neurodivergent youth and families using <strong>DIR/Floortime</strong>, parent support, and tailored developmental treatment planning.</li>
+              <li><strong>College counseling setting</strong> — Provided trauma-informed therapy to emerging and middle-aged adult students, including individual and couples work.</li>
+              <li><strong>Office of Mayor Karen Bass</strong> — Contributed to cross-sector initiatives including language access, animal services, and wildfire-survivor resource coordination.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <section id="writing" class="blush" aria-labelledby="writing-title">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="writing-title">Featured Writing</h2>
+          <p>
+            I care about service, systems, and the wider social conditions that shape well-being. Writing is one of the ways I think publicly, advocate, and contribute beyond the therapy room.
+          </p>
+        </div>
+
+        <div class="writing-list">
+          <div class="writing-item">
+            <h3 style="margin-top:0;">Op-Ed: West Los Angeles Needs to Care About Veteran Homelessness</h3>
+            <p>Published across four local outlets.</p>
+            <p><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Read the article</a></p>
+          </div>
+
+          <div class="writing-item">
+            <h3 style="margin-top:0;">More Articles & Mentions</h3>
+            <p>Additional published work and media references.</p>
+            <p><a href="https://muckrack.com/kelly-kravchuk/articles" target="_blank" rel="noopener">View MuckRack profile</a></p>
+          </div>
+
+          <div class="writing-item">
+            <h3 style="margin-top:0;">Future Essays</h3>
+            <p>Topics may include anxiety and burnout, neurodivergent family life, emotional regulation, relationships, and the social systems that shape mental health.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" aria-labelledby="contact-title">
       <div class="container two-col">
         <div>
           <h2 id="contact-title">Book a Free 15-Minute Consult</h2>
           <p>Email or send a quick note below. I’ll get back to you within 1–2 business days.</p>
-          <p><strong>Email:</strong> <a href="mailto:kellykravchuk@gmail.com">kellykravchuk@gmail.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a></p>
 
           <form action="mailto:hello@kellykravchuk.com" method="post" enctype="text/plain">
             <div>
@@ -270,42 +743,37 @@
               <textarea id="message" name="message" rows="5" placeholder="What would you like support with?"></textarea>
             </div>
             <button type="submit">Send</button>
-            <p class="muted" style="font-size:.85rem;color:var(--muted)">
-              Submitting will open your email client to send the message. Prefer direct email?
-              Write to <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a>.
+            <p style="font-size:.85rem;color:var(--muted)">
+              Submitting will open your email client to send the message.
             </p>
           </form>
         </div>
 
         <div class="card">
           <h3>Location</h3>
-          <p>Telehealth across California and <em>Walk and Talk Therapy</em> on the strand by the ocean in Hermosa Beach.</p>
+          <p>In-person therapy in Hermosa Beach, telehealth across California, and <em>Walk and Talk Therapy</em> on the strand by the ocean.</p>
+
           <h3>Availability</h3>
           <p>Weekdays and limited evenings.</p>
-          <p><strong>Email for new inquiries.</strong></p>
+
           <h3>Fees</h3>
           <p>Out-of-pocket; superbills available for out-of-network reimbursement. Sliding scale slots may be available.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- WRITING -->
-    <section id="writing" aria-labelledby="writing-title">
-      <div class="container">
-        <h2 id="writing-title">Featured Writing</h2>
-        <p>I care about service and systems, and occasionally write about community issues and mental health.</p>
-        <ul>
-          <li><a href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/" target="_blank" rel="noopener">Op-Ed: West Los Angeles Needs to Care About Veteran Homelessness</a> — published across four local outlets.</li>
-          <li><a href="https://muckrack.com/kelly-kravchuk/articles" target="_blank" rel="noopener">More articles by Kelly</a> (MuckRack profile).</li>
-        </ul>
+          <h3>Good fit for</h3>
+          <p>Children, teens, adults, couples, and parents seeking warm, thoughtful, specialized support.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer role="contentinfo">
     <div class="container">
-      <p><strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW (#133376) · Hermosa Beach & Telehealth (CA) · Supervised by Cathy Chamblis, LMFT (#MFC39875) <a href="#contact">Contact</a></p>
-      <p style="opacity:.8;font-size:.9rem">This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).</p>
+      <p>
+        <strong>© <span id="year"></span> Kelly Kravchuk</strong> · ACSW (#133376) · Hermosa Beach & Telehealth (CA) · Supervised by Cathy Chambliss, LMFT (#MFC39875) · <a href="#contact">Contact</a>
+      </p>
+      <p style="opacity:.82;font-size:.92rem">
+        This website provides general information and is not a substitute for professional advice. If you are in crisis, call or text 988 (U.S.).
+      </p>
     </div>
   </footer>
 
