@@ -1,235 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kelly Kravchuk, MSW, ACSW | Therapy in Hermosa Beach &amp; Across California</title>
-  <meta
-    name="description"
-    content="Depth-oriented therapy with Kelly Kravchuk, MSW, ACSW. In-person in Hermosa Beach, telehealth across California, with support for anxiety, relationships, neurodivergent families, burnout, and life transitions."
-  />
-  <meta name="theme-color" content="#f4ede2" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    :root {
-      --bg: #f7f1e8;
-      --bg-soft: #fbf7f1;
-      --sand: #ead9c5;
-      --rose: #d9b8a7;
-      --clay: #a96c58;
-      --ink: #172028;
-      --muted: #58636d;
-      --line: rgba(23, 32, 40, 0.12);
-      --panel: rgba(255, 251, 246, 0.76);
-      --panel-strong: #fffaf3;
-      --deep: #203744;
-      --sea: #7ba9af;
-      --sea-deep: #365b63;
-      --shadow: 0 24px 60px rgba(38, 33, 27, 0.12);
-      --shadow-soft: 0 10px 30px rgba(38, 33, 27, 0.08);
-      --radius: 28px;
-      --radius-sm: 18px;
-      --max: 1180px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Manrope", system-ui, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(217, 184, 167, 0.26), transparent 30%),
-        radial-gradient(circle at top right, rgba(123, 169, 175, 0.2), transparent 25%),
-        linear-gradient(180deg, #f8f2e9 0%, #f7f2ea 36%, #f5eee5 100%);
-      line-height: 1.65;
-    }
-
-    img,
-    video {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 2rem));
-      margin: 0 auto;
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(18px) saturate(150%);
-      background: rgba(247, 241, 232, 0.72);
-      border-bottom: 1px solid rgba(23, 32, 40, 0.06);
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.9rem 0;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      min-width: 0;
-    }
-
-    .brand-mark {
-      width: 48px;
-      height: 48px;
-      border-radius: 16px;
-      display: grid;
-      place-items: center;
-      background:
-        linear-gradient(160deg, rgba(255, 250, 243, 0.9), rgba(234, 217, 197, 0.88));
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: var(--shadow-soft);
-      color: var(--clay);
-      flex: 0 0 auto;
-    }
-
-    .brand-copy {
-      min-width: 0;
-    }
-
-    .eyebrow {
-      margin: 0;
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .brand-copy strong {
-      display: block;
-      font-size: 1rem;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.15rem;
-    }
-
-    .nav-links a {
-      font-size: 0.96rem;
-      color: rgba(23, 32, 40, 0.78);
-    }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--ink);
-    }
-
-    .button,
-    .button-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.55rem;
-      min-height: 52px;
-      padding: 0.85rem 1.3rem;
-      border-radius: 999px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-    }
-
-    .button {
-      color: #fff8f1;
-      background: linear-gradient(135deg, var(--clay), #8f5341);
-      box-shadow: 0 16px 30px rgba(143, 83, 65, 0.24);
-    }
-
-    .button:hover,
-    .button:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: 0 20px 34px rgba(143, 83, 65, 0.28);
-    }
-
-    .button-ghost {
-      color: var(--deep);
-      background: rgba(255, 250, 243, 0.72);
-      border: 1px solid rgba(32, 55, 68, 0.16);
-    }
-
-    .button-ghost:hover,
-    .button-ghost:focus-visible {
-      transform: translateY(-1px);
-      background: rgba(255, 250, 243, 0.96);
-    }
-
-    .mobile-toggle {
-      display: none;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: 1px solid rgba(23, 32, 40, 0.08);
-      background: rgba(255, 250, 243, 0.84);
-      color: var(--ink);
-    }
-
-    .hero {
-      position: relative;
-      overflow: clip;
-      padding: 3rem 0 2rem;
-    }
-
-    .hero::before,
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto;
-      border-radius: 999px;
-      filter: blur(10px);
-      pointer-events: none;
-    }
-
-    .hero::before {
-      top: 2rem;
-      left: -8rem;
-      width: 22rem;
-      height: 22rem;
-      background: rgba(123, 169, 175, 0.15);
-    }
-
-    .hero::after {
-      right: -6rem;
-      top: 6rem;
-      width: 18rem;
-      height: 18rem;
-      background: rgba(217, 184, 167, 0.18);
-    }
+   }
 
     .hero-grid {
+      display: block;
       display: grid;
       grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
       gap: 2rem;
@@ -237,93 +9,61 @@
       min-height: calc(100vh - 96px);
     }
 
+    .hero-stage {
+      position: relative;
+      min-height: min(860px, calc(100vh - 126px));
+      border-radius: 36px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.56);
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(180deg, rgba(15, 24, 31, 0.06), rgba(15, 24, 31, 0.28)),
+        linear-gradient(135deg, rgba(217, 184, 167, 0.18), rgba(123, 169, 175, 0.12));
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 24%;
+    }
+
+    .hero-stage::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(17, 25, 31, 0.64) 0%, rgba(17, 25, 31, 0.36) 34%, rgba(17, 25, 31, 0.1) 58%, rgba(17, 25, 31, 0.04) 100%),
+        linear-gradient(180deg, rgba(255, 245, 235, 0.08), rgba(255, 245, 235, 0.12));
+      pointer-events: none;
+    }
+
     .hero-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: end;
+      min-height: min(860px, calc(100vh - 126px));
+      padding: clamp(1.2rem, 3vw, 2rem);
       padding: 2rem 0;
     }
 
     .hero-card {
       position: relative;
+      width: min(680px, 100%);
       padding: 2.1rem;
       border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255, 250, 243, 0.84), rgba(255, 248, 242, 0.72));
       background: linear-gradient(180deg, rgba(255, 250, 243, 0.82), rgba(255, 248, 242, 0.68));
       border: 1px solid rgba(255, 255, 255, 0.62);
       box-shadow: var(--shadow);
       overflow: hidden;
+      backdrop-filter: blur(14px);
     }
 
     .hero-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -10% -35% auto;
-      width: 16rem;
-      height: 16rem;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(123, 169, 175, 0.18), transparent 62%);
-      pointer-events: none;
-    }
-
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.62);
-      color: var(--deep);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .title {
-      margin: 1rem 0 1rem;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(3rem, 7vw, 5.7rem);
-      line-height: 0.94;
-      font-weight: 600;
-      letter-spacing: -0.025em;
-      max-width: 10.4ch;
-    }
-
-    .title span {
-      display: block;
-      color: var(--sea-deep);
-    }
-
-    .subtitle {
-      max-width: 60ch;
-      margin: 0 0 1.35rem;
-      font-size: 1.04rem;
-      color: rgba(23, 32, 40, 0.82);
-    }
-
-    .hero-actions,
-    .hero-points,
-    .practice-tags,
-    .detail-list,
-    .contact-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .hero-actions {
-      margin: 1.5rem 0 1rem;
-    }
-
-    .hero-points {
-      gap: 0.65rem;
-      margin-top: 1.25rem;
-    }
-
-    .point {
-      padding: 0.6rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.58);
-      border: 1px solid rgba(23, 32, 40, 0.08);
-      color: rgba(23, 32, 40, 0.82);
-      font-size: 0.92rem;
       font-weight: 600;
     }
 
@@ -363,220 +103,53 @@
       z-index: 1;
     }
 
+    .hero-side-panels {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
     .practice-note,
     .floating-quote,
     .video-card,
-    .section-card,
-    .detail-card,
-    .writing-card,
-    .faq-item,
-    .contact-panel {
-      border-radius: var(--radius);
-      border: 1px solid rgba(23, 32, 40, 0.08);
-      background: rgba(255, 250, 243, 0.76);
-      box-shadow: var(--shadow-soft);
     }
 
     .practice-note {
       position: absolute;
-      left: -1rem;
+      right: 1.5rem;
       bottom: 1.5rem;
       max-width: 18rem;
+      position: static;
+      max-width: none;
       padding: 1rem 1.1rem;
       backdrop-filter: blur(14px);
+      z-index: 2;
     }
 
     .practice-note strong {
-      display: block;
-      font-size: 0.92rem;
-      color: var(--sea-deep);
-      margin-bottom: 0.2rem;
-    }
-
-    .practice-note p {
-      margin: 0;
-      font-size: 0.92rem;
-      color: rgba(23, 32, 40, 0.82);
     }
 
     .floating-quote {
       position: absolute;
       top: 1.5rem;
-      right: -1rem;
+      right: 1.5rem;
       max-width: 16rem;
+      position: static;
+      max-width: none;
       padding: 1rem 1.05rem;
       background: rgba(32, 55, 68, 0.9);
       color: #f9f4ed;
       border: 0;
+      z-index: 2;
     }
 
     .floating-quote p {
-      margin: 0;
-      font-size: 0.96rem;
-      line-height: 1.55;
-    }
-
-    .floating-quote span {
-      display: block;
-      margin-top: 0.45rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(249, 244, 237, 0.7);
-    }
-
-    .section {
-      padding: 5.5rem 0;
-      scroll-margin-top: 6rem;
-    }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 1.5rem;
-      align-items: end;
-      margin-bottom: 2rem;
-    }
-
-    .section-label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-size: 0.76rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--clay);
-      font-weight: 800;
-    }
-
-    .section h2 {
-      margin: 0;
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 0.98;
-      font-weight: 600;
-    }
-
-    .section-header p,
-    .section-copy,
-    .detail-card p,
-    .writing-card p,
-    .faq-item p,
-    .contact-panel p,
-    footer p {
-      color: rgba(23, 32, 40, 0.78);
-    }
-
-    .specialty-grid,
-    .services-grid,
-    .details-grid,
-    .writing-grid,
-    .faq-grid {
-      display: grid;
-      gap: 1.1rem;
-    }
-
-    .specialty-grid {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .details-grid,
-    .writing-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .section-card,
-    .detail-card,
-    .writing-card,
-    .faq-item,
-    .contact-panel {
-      padding: 1.45rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section-card::before,
-    .detail-card::before,
-    .writing-card::before,
-    .faq-item::before {
-      content: "";
-      position: absolute;
-      inset: auto auto -4rem -2rem;
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(123, 169, 175, 0.14), transparent 65%);
-      pointer-events: none;
-    }
-
-    .section-card h3,
-    .detail-card h3,
-    .writing-card h3,
-    .contact-panel h3 {
-      margin: 0 0 0.55rem;
-      font-size: 1.15rem;
-      line-height: 1.3;
-    }
-
-    .section-card p,
-    .detail-card p,
-    .writing-card p {
-      margin: 0;
-    }
-
-    .section-card strong {
-      color: var(--sea-deep);
-    }
-
-    .services-band {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(32, 55, 68, 0.94), rgba(27, 45, 56, 0.92)),
-        radial-gradient(circle at top right, rgba(255, 255, 255, 0.08), transparent 28%);
-      color: #f7efe5;
-    }
-
-    .services-band::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(123, 169, 175, 0.16), transparent 38%);
-      pointer-events: none;
-    }
-
-    .services-band .section-header p,
-    .services-band .section-card p,
-    .services-band .detail-card p,
-    .services-band .section-card strong {
-      color: rgba(247, 239, 229, 0.86);
-    }
-
-    .services-band .section-label {
-      color: #f0c8b7;
-    }
-
-    .services-band .section-card {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.09);
-      box-shadow: none;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      gap: 1.5rem;
-      align-items: stretch;
-    }
-
-    .video-card {
-      padding: 0;
       min-height: 460px;
       overflow: hidden;
       position: relative;
+      background:
+        linear-gradient(180deg, rgba(32, 55, 68, 0.42), rgba(32, 55, 68, 0.7)),
+        url("assets/kelly-portrait.jpg") center 20% / cover no-repeat;
       background: linear-gradient(180deg, rgba(32, 55, 68, 0.9), rgba(32, 55, 68, 0.74));
     }
 
@@ -584,216 +157,10 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.72;
+      opacity: 0.92;
     }
 
     .video-overlay {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(180deg, rgba(17, 25, 31, 0.1), rgba(17, 25, 31, 0.52)),
-        radial-gradient(circle at top left, rgba(255, 248, 240, 0.18), transparent 35%);
-    }
-
-    .video-copy {
-      position: absolute;
-      left: 1.4rem;
-      right: 1.4rem;
-      bottom: 1.4rem;
-      padding: 1.35rem;
-      border-radius: 22px;
-      background: rgba(255, 250, 243, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      backdrop-filter: blur(10px);
-      color: #fffaf3;
-    }
-
-    .video-copy h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1.2rem;
-    }
-
-    .video-copy p {
-      margin: 0;
-      color: rgba(255, 250, 243, 0.88);
-    }
-
-    .about-panel {
-      padding: 1.75rem;
-      border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255, 250, 243, 0.88), rgba(255, 248, 242, 0.72));
-      border: 1px solid rgba(255, 255, 255, 0.62);
-      box-shadow: var(--shadow);
-    }
-
-    .about-panel p {
-      margin: 0 0 1rem;
-    }
-
-    .practice-tags {
-      margin: 1rem 0 1.4rem;
-    }
-
-    .tag {
-      padding: 0.45rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(23, 32, 40, 0.08);
-      font-size: 0.88rem;
-      color: rgba(23, 32, 40, 0.8);
-    }
-
-    .detail-list {
-      margin-top: 1rem;
-    }
-
-    .detail-list .tag {
-      background: rgba(234, 217, 197, 0.35);
-    }
-
-    .writing-link {
-      color: var(--clay);
-      font-weight: 800;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1rem;
-    }
-
-    .contact-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.92fr);
-      gap: 1.3rem;
-      align-items: start;
-    }
-
-    .contact-panel {
-      padding: 1.6rem;
-      background: linear-gradient(180deg, rgba(255, 250, 243, 0.9), rgba(255, 248, 242, 0.76));
-      box-shadow: var(--shadow);
-    }
-
-    .contact-list {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.6rem;
-      margin: 1.1rem 0 1.6rem;
-    }
-
-    .contact-list a {
-      color: var(--sea-deep);
-      font-weight: 700;
-    }
-
-    .contact-panel form {
-      display: grid;
-      gap: 0.95rem;
-      margin-top: 1rem;
-    }
-
-    .field label {
-      display: block;
-      margin-bottom: 0.35rem;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--deep);
-    }
-
-    .field input,
-    .field textarea {
-      width: 100%;
-      padding: 0.85rem 0.95rem;
-      border-radius: 16px;
-      border: 1px solid rgba(23, 32, 40, 0.12);
-      background: rgba(255, 255, 255, 0.78);
-      color: var(--ink);
-    }
-
-    .field input:focus,
-    .field textarea:focus {
-      outline: 2px solid rgba(123, 169, 175, 0.4);
-      border-color: rgba(123, 169, 175, 0.4);
-    }
-
-    .microcopy {
-      margin: 0.25rem 0 0;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    footer {
-      padding: 2rem 0 2.8rem;
-    }
-
-    .footer-shell {
-      display: flex;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding-top: 1.4rem;
-      border-top: 1px solid rgba(23, 32, 40, 0.08);
-    }
-
-    .footer-shell p {
-      margin: 0;
-      max-width: 52ch;
-      font-size: 0.93rem;
-    }
-
-    [data-reveal] {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    [data-reveal].is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 1100px) {
-      .specialty-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .floating-quote {
-        right: 1rem;
-      }
-    }
-
-    @media (max-width: 920px) {
-      .site-nav {
-        flex-wrap: wrap;
-      }
-
-      .mobile-toggle {
-        display: inline-grid;
-        place-items: center;
-      }
-
-      .nav-links {
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.3rem 0 0.6rem;
-      }
-
-      .nav-links.is-open {
-        display: flex;
-      }
-
-      .hero-grid,
-      .section-header,
-      .services-grid,
-      .details-grid,
-      .writing-grid,
-      .two-column,
-      .contact-shell {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
         padding-top: 2rem;
       }
 
@@ -801,95 +168,61 @@
         min-height: auto;
       }
 
+      .hero-stage {
+        min-height: auto;
+      }
+
+      .hero-copy {
+        min-height: auto;
+        padding: 1rem;
+      }
+
+      .hero-stage::after {
+        background:
+          linear-gradient(180deg, rgba(17, 25, 31, 0.24) 0%, rgba(17, 25, 31, 0.46) 48%, rgba(17, 25, 31, 0.62) 100%);
+        padding-top: 0;
+      }
+
       .practice-note,
       .floating-quote {
         position: static;
         max-width: none;
-      }
-
-      .hero-side {
-        order: -1;
-      }
-
-      .portrait {
-        height: auto;
-        max-height: 38rem;
-      }
-
-      .footer-shell {
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        width: min(var(--max), calc(100% - 1.25rem));
-      }
-
-      .hero-card,
-      .about-panel,
-      .contact-panel {
-        padding: 1.25rem;
-      }
-
-      .section {
-        padding: 4.4rem 0;
-      }
-
-      .specialty-grid {
+        margin-top: 1rem;
+      .hero-side-panels {
         grid-template-columns: 1fr;
       }
 
-      .title {
-        font-size: clamp(2.6rem, 15vw, 4.1rem);
-      }
-
-      .button,
-      .button-ghost {
-        width: 100%;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="site-nav" aria-label="Primary">
-        <a class="brand" href="#top" aria-label="Kelly Kravchuk home">
-          <div class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 38C18 29 25 26 33 26C41 26 48 30 54 36C48 35 43 36 38 39C31 43 26 49 22 55" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11 47C18 43 25 43 32 47C39 51 46 51 53 47" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="brand-copy">
-            <p class="eyebrow">Private Practice</p>
-            <strong>Kelly Kravchuk, MSW, ACSW</strong>
-          </div>
-        </a>
-
-        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
-          <span aria-hidden="true">☰</span>
-        </button>
-
-        <div class="nav-links" id="nav-links">
-          <a href="#approach">Approach</a>
-          <a href="#specialties">Specialties</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact" class="button">Book a consult</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
+      .footer-shell {
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
+        <div class="hero-stage" data-reveal>
+          <img
+            class="hero-image"
+            src="assets/kelly-portrait.jpg"
+            alt="Kelly Kravchuk standing by a lake at sunset in a dark coat"
+          />
+          <div class="hero-copy">
+            <div class="hero-card">
+              <p class="kicker">Hermosa Beach + Telehealth Across California</p>
+              <h1 class="title">
+                Therapy for the parts of you
+                <span>that have had to hold a lot.</span>
+              </h1>
+              <p class="subtitle">
+                Warm, depth-oriented therapy for children, teens, adults, couples, and parents navigating anxiety, relationship strain, burnout, life transitions, and the quiet overwhelm that can hide behind competence.
+              </p>
+              <div class="hero-actions">
+                <a class="button" href="#contact">Request a free 15-minute consult</a>
+                <a class="button-ghost" href="#specialties">See areas of focus</a>
+              </div>
+              <div class="hero-points" aria-label="Practice highlights">
+                <span class="point">High-functioning anxiety</span>
+                <span class="point">Dating and relationships</span>
+                <span class="point">Neurodivergent families</span>
+                <span class="point">Burnout and perfectionism</span>
+                <span class="point">Walk and Talk Therapy</span>
+              </div>
         <div class="hero-copy" data-reveal>
           <div class="hero-card">
             <p class="kicker">Hermosa Beach + Telehealth Across California</p>
@@ -912,6 +245,9 @@
               <span class="point">Walk and Talk Therapy</span>
             </div>
           </div>
+          <div class="floating-quote">
+            <p>Insight matters, but so does feeling steadier in your body, clearer in your relationships, and less alone with what hurts.</p>
+            <span>Relational, psychodynamic, trauma-informed</span>
         </div>
 
         <div class="hero-side" data-reveal>
@@ -921,6 +257,11 @@
               src="assets/headshot.jpg"
               alt="Kelly Kravchuk standing by the water at sunset"
             />
+          </div>
+          <div class="practice-note">
+            <strong>In-person in Hermosa Beach</strong>
+            <p>Also available statewide by telehealth, with Walk and Talk sessions along the strand when that feels like a better fit.</p>
+          <div class="hero-side-panels">
             <div class="floating-quote">
               <p>Insight matters, but so does feeling steadier in your body, clearer in your relationships, and less alone with what hurts.</p>
               <span>Relational, psychodynamic, trauma-informed</span>
@@ -932,316 +273,61 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="approach">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <div>
-            <span class="section-label">Approach</span>
-            <h2>Thoughtful therapy that goes beneath the surface without losing practicality.</h2>
-          </div>
-          <p>
-            Kelly’s work integrates psychodynamic and relational therapy with attachment-based, trauma-informed care. The focus is not just on symptom relief, but on understanding patterns, strengthening regulation, and creating more room for connection, choice, and self-trust.
-          </p>
-        </div>
-
-        <div class="specialty-grid">
-          <article class="section-card" data-reveal>
-            <h3>Depth with steadiness</h3>
-            <p>Sessions make room for the deeper story while staying grounded in what helps you feel more resourced now.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Relational and attachment-focused</h3>
-            <p>Therapy explores how early relationships and present environments shape self-protection, intimacy, and identity.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Developmentally informed</h3>
-            <p>Work with children, teens, and families reflects each person’s stage of development, nervous system, and communication style.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Holistic by design</h3>
-            <p><strong>Sleep, movement, nourishment, social support, and environment</strong> are treated as real parts of emotional health, not afterthoughts.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services-band" id="specialties">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <div>
-            <span class="section-label">Specialties</span>
-            <h2>Support for the places people often look “fine” from the outside.</h2>
-          </div>
-          <p>
-            This practice is especially aligned with thoughtful, sensitive, self-aware people who want more than symptom management alone, as well as families needing attuned support around neurodivergence and regulation.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="section-card" data-reveal>
-            <h3>High-functioning anxiety</h3>
-            <p>For people who appear capable and composed while privately carrying overthinking, perfectionism, pressure, or chronic self-criticism.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Dating and relationships</h3>
-            <p>Space to work with attachment patterns, mixed signals, emotional unavailability, boundaries, and the strain of modern dating.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Neurodivergent families</h3>
-            <p>Support for autism, ADHD, regulation differences, diagnosis questions, advocacy, parent coaching, and family stress.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Burnout and perfectionism</h3>
-            <p>Therapy for the tension between ambition and depletion, especially when productivity has become tied to worth.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Children, teens, and young adults</h3>
-            <p>Developmentally responsive care for overwhelm, emotional pain, identity questions, transitions, and family conflict.</p>
-          </article>
-          <article class="section-card" data-reveal>
-            <h3>Parent support</h3>
-            <p>Coaching that strengthens co-regulation, attuned communication, boundaries, and the emotional climate of the home.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="services">
       <div class="container two-column">
         <div class="video-card" data-reveal>
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/kelly-portrait.jpg" aria-hidden="true">
-            <source src="assets/breathing.mp4" />
+          <video autoplay muted loop playsinline controls preload="metadata" poster="assets/headshot.jpg" aria-label="Ocean breathing video">
+            <source src="assets/breathing.mp4" type="video/mp4" />
           </video>
           <div class="video-overlay"></div>
           <div class="video-copy">
             <h3>Therapy can be a place to slow down enough to hear yourself again.</h3>
-            <p>Sometimes healing begins by creating enough steadiness to notice what you feel, what you need, and what has been asking for care.</p>
-          </div>
-        </div>
-
-        <div class="about-panel" data-reveal>
-          <span class="section-label">Services</span>
-          <h2>Collaborative care, shaped around the life you are actually living.</h2>
-          <p>
-            Services are tailored to the person, relationship, or family in front of you. The work stays warm and collaborative, while still offering structure, reflection, and a clear therapeutic direction.
-          </p>
-          <div class="practice-tags" aria-label="Service list">
-            <span class="tag">Individual therapy</span>
-            <span class="tag">Couples therapy</span>
-            <span class="tag">Parent coaching</span>
-            <span class="tag">Family support</span>
-            <span class="tag">Telehealth across California</span>
-            <span class="tag">In-person in Hermosa Beach</span>
-          </div>
-          <div class="details-grid">
-            <article class="detail-card">
-              <h3>Individual therapy</h3>
-              <p>For children, teens, and adults navigating anxiety, identity, emotional pain, transitions, relational stress, and overwhelm.</p>
-            </article>
-            <article class="detail-card">
-              <h3>Couples therapy</h3>
-              <p>Attachment-oriented work to repair injuries, soften reactive cycles, and strengthen communication and emotional closeness.</p>
-            </article>
-            <article class="detail-card">
-              <h3>Parent coaching</h3>
-              <p>Support for co-regulation, developmental understanding, boundaries, and responding with more confidence and attunement.</p>
-            </article>
-            <article class="detail-card">
-              <h3>Walk and Talk sessions</h3>
-              <p>Available in Hermosa Beach for clients who feel more present, regulated, or open while moving alongside the ocean.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <div>
-            <span class="section-label">About Kelly</span>
-            <h2>Warm, attuned, insight-oriented care with strong clinical grounding.</h2>
-          </div>
-          <p>
-            Kelly Kravchuk, MSW, ACSW (she/her) works with clients in Hermosa Beach and across California. Her style is engaged and collaborative, with an emphasis on emotional safety, meaningful insight, and practical support for change.
-          </p>
-        </div>
-
-        <div class="details-grid">
-          <article class="detail-card" data-reveal>
-            <h3>Training and orientation</h3>
-            <p>MSW from the University of Southern California, with work grounded in psychodynamic and relational therapy, attachment theory, trauma-informed care, motivational interviewing, ACT, CBT, and problem-solving therapy.</p>
-            <div class="detail-list">
-              <span class="tag">ASW133376</span>
-              <span class="tag">Receiving supervision toward LCSW licensure</span>
-            </div>
-          </article>
-          <article class="detail-card" data-reveal>
-            <h3>Experience highlights</h3>
-            <p>Clinical experience includes work with neurodivergent youth and families using DIR/Floortime-informed care, trauma-informed therapy in a college counseling setting, and public-service work supporting cross-sector community initiatives.</p>
-            <div class="detail-list">
-              <span class="tag">Positive Development</span>
-              <span class="tag">College counseling</span>
-              <span class="tag">Office of Mayor Karen Bass</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="writing">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <div>
-            <span class="section-label">Writing</span>
-            <h2>Public thought shaped by care, service, and the larger systems that affect well-being.</h2>
-          </div>
-          <p>
-            Writing extends the work beyond the therapy room. It is one way Kelly thinks publicly about emotional life, social conditions, and the responsibilities we have to one another.
-          </p>
-        </div>
-
-        <div class="writing-grid">
-          <article class="writing-card" data-reveal>
-            <h3>West Los Angeles Needs to Care About Veteran Homelessness</h3>
-            <p>Published across four local outlets, this op-ed argues for a deeper public response to veteran homelessness in West Los Angeles.</p>
-            <p style="margin-top:0.85rem;">
-              <a
-                class="writing-link"
-                href="https://westsidetoday.com/2024/03/25/opinion-west-los-angeles-needs-to-care-about-veteran-homelessness/"
-                target="_blank"
-                rel="noopener"
-              >Read the article</a>
-            </p>
-          </article>
-          <article class="writing-card" data-reveal>
-            <h3>More to come</h3>
-            <p>This section is structured to grow into essays, resources, and practice writing over time without needing a full redesign later.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-header" data-reveal>
-          <div>
-            <span class="section-label">Practice Details</span>
-            <h2>Clear information for taking the next step.</h2>
-          </div>
-          <p>
-            If you are unsure whether the practice is a fit, a short consultation can help clarify that.
-          </p>
-        </div>
-
-        <div class="faq-grid">
-          <article class="faq-item" data-reveal>
-            <h3>Where are sessions available?</h3>
-            <p>In-person sessions are offered in Hermosa Beach. Telehealth is available across California.</p>
-          </article>
-          <article class="faq-item" data-reveal>
-            <h3>Who is the practice for?</h3>
-            <p>Children, teens, adults, couples, and parents seeking warm, thoughtful, specialized support.</p>
-          </article>
-          <article class="faq-item" data-reveal>
-            <h3>Do you offer a consultation?</h3>
-            <p>Yes. A free 15-minute consultation is available to discuss what is bringing you in and whether the practice feels like a good fit.</p>
-          </article>
-          <article class="faq-item" data-reveal>
-            <h3>What about fees and insurance?</h3>
-            <p>The practice is out-of-pocket. Superbills are available for possible out-of-network reimbursement, and limited sliding-scale spots may be available.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container contact-shell">
-        <div data-reveal>
-          <span class="section-label">Contact</span>
-          <h2>Reach out for a free consultation.</h2>
-          <p class="section-copy">
             Email directly or use the form below. The form opens your default email client with your message prepped, which keeps setup simple for a static site.
           </p>
           <div class="contact-list">
+            <div><strong>Email:</strong> <a href="mailto:hello@kellykravchuk.com">hello@kellykravchuk.com</a></div>
             <div><strong>Email:</strong> <a href="mailto:kellykravchuk.therapy@gmail.com">kellykravchuk.therapy@gmail.com</a></div>
             <div><strong>Availability:</strong> Weekdays and limited evenings</div>
             <div><strong>Location:</strong> Hermosa Beach + statewide telehealth</div>
           </div>
+          <a class="button-ghost" href="mailto:hello@kellykravchuk.com?subject=Consultation%20Request">Email Kelly directly</a>
           <a class="button-ghost" href="mailto:kellykravchuk.therapy@gmail.com?subject=Consultation%20Request">Email Kelly directly</a>
         </div>
 
         <div class="contact-panel" data-reveal>
-          <h3>Consultation request</h3>
-          <p>Share a few details about what you’re looking for, and your email app will open with the message ready to send.</p>
-          <form action="mailto:kellykravchuk.therapy@gmail.com?subject=Consultation%20Request" method="post" enctype="text/plain">
-            <div class="field">
-              <label for="name">Your name</label>
-              <input id="name" name="name" type="text" placeholder="Your full name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            </div>
-            <div class="field">
-              <label for="message">What would you like support with?</label>
-              <textarea id="message" name="message" rows="6" placeholder="A few sentences is plenty." required></textarea>
-            </div>
-            <button class="button" type="submit">Start the email</button>
-            <p class="microcopy">Registered Associate Clinical Social Worker ASW133376. Supervised by Cathy Chambliss, LMFT #MFC39875.</p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
+        const email = String(formData.get("email") || "").trim();
+        const message = String(formData.get("message") || "").trim();
 
-  <footer>
-    <div class="container footer-shell">
-      <p><strong>Kelly Kravchuk, MSW, ACSW</strong> offers therapy in Hermosa Beach and by telehealth across California.</p>
-      <p>
-        © <span id="year"></span> Kelly Kravchuk. This website is for general information only and is not a substitute for professional advice. If you are in crisis, call or text 988 in the United States.
-      </p>
-    </div>
-  </footer>
+        const body = [
+        const bodyParts = [
+          `Hi Kelly,`,
+          ``,
+          `I'd like to request a consultation.`,
+          ``,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          ``,
+          `What I'm looking for:`,
+          message
+        ].join("\n");
+        ];
 
-  <script>
-    const toggle = document.querySelector(".mobile-toggle");
-    const navLinks = document.querySelector("#nav-links");
+        const mailto = `mailto:hello@kellykravchuk.com?subject=${encodeURIComponent("Consultation Request")}&body=${encodeURIComponent(body)}`;
+        if (name || email) {
+          bodyParts.push(``);
+          bodyParts.push(`Best,`);
 
-    if (toggle && navLinks) {
-      toggle.addEventListener("click", () => {
-        const expanded = toggle.getAttribute("aria-expanded") === "true";
-        toggle.setAttribute("aria-expanded", String(!expanded));
-        navLinks.classList.toggle("is-open");
+          if (name) {
+            bodyParts.push(name);
+          }
+
+          if (email) {
+            bodyParts.push(email);
+          }
+        }
+
+        const body = bodyParts.join("\n");
+        const mailto = `mailto:kellykravchuk.therapy@gmail.com?subject=${encodeURIComponent("Consultation Request")}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
       });
     }
-
-    const revealItems = document.querySelectorAll("[data-reveal]");
-
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.16 }
-      );
-
-      revealItems.forEach((item, index) => {
-        item.style.transitionDelay = `${Math.min(index * 40, 240)}ms`;
-        observer.observe(item);
-      });
-    } else {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
-    }
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
